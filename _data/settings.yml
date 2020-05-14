@@ -7,18 +7,32 @@ disqus:
 google-ID: 'UA-91332049-1'
 
 menu: 
-  - name: 博文目录
+  - name: 博客
     submenu:
-      - name: 技术
+      - name: 前端
         link: /projects/microbam
-      - name: 杂七杂八
+      - name: 后端
         link: /projects/ourlegacy
-  - name: 说说
-    link: /
+      - name: JAVA
+        link: /projects/ourlegacy
+      - name: NodeJS
+        link: /projects/ourlegacy
+      - name: 区块链
+        link: /projects/ourlegacy
   - name: 标签
     link: /tags
-  - name: 关于
+  - name: 说说
+    link: /
+  - name: 高达
+    link: /tags
+  - name: 猫奴
     link: /about
+  - name: 游戏
+    submenu:
+      - name: 动森
+        link: https://github.com/Wangmmx
+      - name: 冒险岛
+        link: https://blog.csdn.net/wangmmx725
   - name: 联系我
     submenu:
       - name: GitHub
