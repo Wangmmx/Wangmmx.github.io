@@ -10,29 +10,29 @@ menu:
   - name: 博客
     submenu:
       - name: 前端
-        link: /projects/microbam
+        link: /projects/front-end
       - name: 后端
-        link: /projects/ourlegacy
+        link: /projects/back-end
       - name: JAVA
-        link: /projects/ourlegacy
+        link: /projects/java
       - name: NodeJS
-        link: /projects/ourlegacy
+        link: /projects/nodejs
       - name: 区块链
-        link: /projects/ourlegacy
+        link: /projects/blockchain
   - name: 标签
     link: /tags
   - name: 说说
-    link: /
+    link: /moods
   - name: 高达
-    link: /tags
+    link: /ganda
   - name: 猫奴
-    link: /about
+    link: /cats
   - name: 游戏
     submenu:
       - name: 动森
-        link: https://github.com/Wangmmx
+        link: /games/animal-crossing
       - name: 冒险岛
-        link: https://blog.csdn.net/wangmmx725
+        link: /gemes/maple-story
   - name: 联系我
     submenu:
       - name: GitHub
