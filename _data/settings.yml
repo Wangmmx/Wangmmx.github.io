@@ -19,6 +19,8 @@ menu:
         link: /projects/nodejs
       - name: 区块链
         link: /projects/blockchain
+  - name: 个人主页
+    link: /about-me
   - name: 标签
     link: /tags
   - name: 说说
