@@ -1,7 +1,9 @@
 <!doctype html>
 <html lang="en">
+<!--用head.html部分-->
 {% include head.html %}
 <body>
+<!--用header.html部分-->
 	{% include header.html %}
 	<div class="container">
 
@@ -24,6 +26,7 @@
 	<h1>Abstract</h1>
 	{% endif %}
 
+		<!--插入content部分-->
 	{{ content }}
 
 
@@ -47,10 +50,12 @@
 		{% endfor %}
 		</ul>
 	{% endif %}
-
+		<!--用disqus.html部分-->
 	{% include disqus.html %}
 	</div>
+<!--用footer.html部分-->
 	{% include footer.html %}
+<!--用analytics.html部分-->
 	{% include analytics.html %}
 </body>
 </html>
