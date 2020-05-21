@@ -11,15 +11,15 @@ menu:
   - name: 博客
     submenu:
       - name: 前端
-        link: /projects/front-end
+        link: /blog/front-end
       - name: 后端
-        link: /projects/back-end
+        link: /blog/back-end
       - name: JAVA
-        link: /projects/java
+        link: /blog/java
       - name: NodeJS
-        link: /projects/nodejs
+        link: /blog/nodejs
       - name: 区块链
-        link: /projects/blockchain
+        link: /blog/blockchain
   - name: 个人主页
     link: /about-me
   - name: 标签
@@ -30,6 +30,8 @@ menu:
     link: /ganda
   - name: 猫奴
     link: /cats
+  - name: 相册
+    link: /photos
   - name: 游戏
     submenu:
       - name: 动森
