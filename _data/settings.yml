@@ -37,7 +37,7 @@ menu:
       - name: 动森
         link: /games/animal-crossing
       - name: 冒险岛
-        link: /gemes/maple-story
+        link: /games/maple-story
   - name: 联系我
     submenu:
       - name: GitHub
