@@ -1,1 +1,80 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="https://wangmmx.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://wangmmx.github.io/" rel="alternate" type="text/html" /><updated>2026-11-18T15:54:02+08:00</updated><id>https://wangmmx.github.io/feed.xml</id><title type="html">Wangmmx · 个人空间</title><subtitle>代码、Web3、微缩模型与生活，Wangmmx 的个人小空间。</subtitle><author><name>https://github.com/Wangmmx</name></author></feed>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="https://wangmmx.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://wangmmx.github.io/" rel="alternate" type="text/html" /><updated>2026-11-18T16:11:44+08:00</updated><id>https://wangmmx.github.io/feed.xml</id><title type="html">Wangmmx · 个人空间</title><subtitle>代码、Web3、微缩模型与生活，Wangmmx 的个人小空间。</subtitle><author><name>https://github.com/Wangmmx</name></author><entry><title type="html">示例｜给想法留一个落脚点</title><link href="https://wangmmx.github.io/posts/a-place-for-ideas/" rel="alternate" type="text/html" title="示例｜给想法留一个落脚点" /><published>2026-11-18T09:00:00+08:00</published><updated>2026-11-18T09:00:00+08:00</updated><id>https://wangmmx.github.io/posts/a-place-for-ideas</id><content type="html" xml:base="https://wangmmx.github.io/posts/a-place-for-ideas/">&lt;blockquote&gt;
+  &lt;p&gt;这是一篇排版示例，用来预览文章列表和详情页，可以随时替换或删除。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;有些想法适合写成代码，有些适合做成微缩模型，还有一些只需要几行文字。这个小空间可以把它们都收下来，不必急着分出一个固定的主题。&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;h2 id=&quot;从一小块街区开始&quot;&gt;从一小块街区开始&lt;/h2&gt;
+
+&lt;p&gt;首页里的每一栋小店，都可以成为一类记录的入口：模型、建模打印、游戏、Web3、AI，还有动手练习的小项目。&lt;/p&gt;
+
+&lt;p&gt;文章页则安静一点。留下标题、日期和内容，让阅读有自己的节奏。&lt;strong&gt;重要的想法可以加粗&lt;/strong&gt;，随手想到的补充也可以用 &lt;em&gt;斜体&lt;/em&gt; 记下来。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/home/city-mountains-pixel-v3.png&quot; alt=&quot;淡色山脉与城市建筑组成的像素风景&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;一张像素风景，给文字之间留一点呼吸的空间。&lt;/em&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;一些值得记下的小事&quot;&gt;一些值得记下的小事&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;一个终于跑通的功能，以及当时卡住的地方。&lt;/li&gt;
+  &lt;li&gt;一次建模或打印尝试，成功和失败都可以留下。&lt;/li&gt;
+  &lt;li&gt;游戏里遇到的好设计，或者某个突然冒出来的点子。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;不一定每篇都很长。能够准确留下一个想法，就已经足够。&lt;/p&gt;
+
+&lt;h3 id=&quot;让想法慢慢变成作品&quot;&gt;让想法慢慢变成作品&lt;/h3&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;先把问题写清楚。&lt;/li&gt;
+  &lt;li&gt;做一个能运行的小版本。&lt;/li&gt;
+  &lt;li&gt;记录过程，再决定下一步。&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;也可以放一点代码&quot;&gt;也可以放一点代码&lt;/h2&gt;
+
+&lt;p&gt;比如，一个简单的主题切换函数。正文里的 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;theme&lt;/code&gt; 是行内代码，下面的代码块则适合展示完整片段。&lt;/p&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;themes&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;cream&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;midnight&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;white&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;black&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
+
+&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;switchTheme&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;theme&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;!&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;themes&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;includes&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;theme&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;nb&quot;&gt;document&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;documentElement&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;dataset&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;theme&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;theme&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;用表格整理几个方向&quot;&gt;用表格整理几个方向&lt;/h2&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;小店&lt;/th&gt;
+      &lt;th&gt;可以记录什么&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Miniature / 3D&lt;/td&gt;
+      &lt;td&gt;微缩作品、建模过程、打印材料与制作记录&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Games / Web3 / AI&lt;/td&gt;
+      &lt;td&gt;游戏体验、学习笔记和工具实践&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Projects&lt;/td&gt;
+      &lt;td&gt;微信小程序、小游戏与其他练手项目&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;先完成一件小事，再给下一件事留一点空地。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;这篇示例到这里就结束了。可以去看看&lt;a href=&quot;/journal/&quot;&gt;全部记录&lt;/a&gt;，也可以&lt;a href=&quot;/&quot;&gt;回到街区&lt;/a&gt;，继续逛逛。&lt;/p&gt;</content><author><name>https://github.com/Wangmmx</name></author><category term="示例文章" /><category term="个人网站" /><summary type="html">这是一篇排版示例，用来预览文章列表和详情页，可以随时替换或删除。 有些想法适合写成代码，有些适合做成微缩模型，还有一些只需要几行文字。这个小空间可以把它们都收下来，不必急着分出一个固定的主题。</summary></entry></feed>

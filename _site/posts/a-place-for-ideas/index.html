@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="zh-CN" data-theme="cream">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <title>示例｜给想法留一个落脚点</title>
+  <meta name="description" content="用一篇小小的示例，看看文字、图片、代码和表格在这片个人空间里的样子。">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="示例｜给想法留一个落脚点">
+  <meta property="og:description" content="用一篇小小的示例，看看文字、图片、代码和表格在这片个人空间里的样子。">
+  <link rel="icon" type="image/png" href="/icon.png">
+  <script>
+    // Restore the saved theme before paint, including when storage is restricted.
+    try {
+      var savedTheme = localStorage.getItem('wangmmx-home-theme');
+      if (['cream', 'midnight', 'white', 'black'].indexOf(savedTheme) !== -1) {
+        document.documentElement.dataset.theme = savedTheme;
+      }
+    } catch (_) {}
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/home.css?v=20261118-new-journal">
+  <script src="/assets/js/home.js?v=20261118-new-journal" defer></script>
+  
+  <link rel="stylesheet" href="/assets/css/content.css?v=20261118-new-journal">
+  
+  <link rel="alternate" type="application/atom+xml" title="Wangmmx 的记录" href="/feed.xml">
+  <link rel="canonical" href="https://wangmmx.github.io/posts/a-place-for-ideas/">
+</head>
+
+<body>
+  <a class="skip-link" href="#main-content">跳到主要内容</a>
+  <div id="wangmmx-home" class="content-shell">
+    <header class="site-header">
+  <a class="logo" href="/" aria-label="Wangmmx 首页">Wangmmx</a>
+  <nav class="content-nav" aria-label="网站导航">
+    <a href="/">街区</a>
+    <a href="/journal/">记录</a>
+    <a href="/about/">关于</a>
+  </nav>
+  <label class="theme-picker" for="theme-picker">
+    <span class="sr-label">切换配色</span>
+    <select id="theme-picker" aria-label="切换网站配色">
+      <option value="cream">奶油绿</option><option value="midnight">午夜蓝</option>
+      <option value="white">纯白</option><option value="black">纯黑</option>
+    </select>
+  </label>
+</header>
+
+    <main id="main-content" class="reading-main"><article class="post">
+  <div class="reading-heading">
+    <a class="back-link" href="/journal/">← 全部记录</a>
+    <p class="eyebrow">JOURNAL / 2026</p>
+    <h1>示例｜给想法留一个落脚点</h1>
+    <div class="post-meta"><time datetime="2026-11-18T09:00:00+08:00">2026.11.18</time>
+      
+      <a href="/projects/">Projects</a>
+    </div>
+    <p class="reading-description">用一篇小小的示例，看看文字、图片、代码和表格在这片个人空间里的样子。</p>
+  </div>
+  <div class="prose"><blockquote>
+  <p>这是一篇排版示例，用来预览文章列表和详情页，可以随时替换或删除。</p>
+</blockquote>
+
+<p>有些想法适合写成代码，有些适合做成微缩模型，还有一些只需要几行文字。这个小空间可以把它们都收下来，不必急着分出一个固定的主题。</p>
+
+<!--more-->
+
+<h2 id="从一小块街区开始">从一小块街区开始</h2>
+
+<p>首页里的每一栋小店，都可以成为一类记录的入口：模型、建模打印、游戏、Web3、AI，还有动手练习的小项目。</p>
+
+<p>文章页则安静一点。留下标题、日期和内容，让阅读有自己的节奏。<strong>重要的想法可以加粗</strong>，随手想到的补充也可以用 <em>斜体</em> 记下来。</p>
+
+<p><img src="/assets/images/home/city-mountains-pixel-v3.png" alt="淡色山脉与城市建筑组成的像素风景" /></p>
+
+<p><em>一张像素风景，给文字之间留一点呼吸的空间。</em></p>
+
+<h2 id="一些值得记下的小事">一些值得记下的小事</h2>
+
+<ul>
+  <li>一个终于跑通的功能，以及当时卡住的地方。</li>
+  <li>一次建模或打印尝试，成功和失败都可以留下。</li>
+  <li>游戏里遇到的好设计，或者某个突然冒出来的点子。</li>
+</ul>
+
+<p>不一定每篇都很长。能够准确留下一个想法，就已经足够。</p>
+
+<h3 id="让想法慢慢变成作品">让想法慢慢变成作品</h3>
+
+<ol>
+  <li>先把问题写清楚。</li>
+  <li>做一个能运行的小版本。</li>
+  <li>记录过程，再决定下一步。</li>
+</ol>
+
+<h2 id="也可以放一点代码">也可以放一点代码</h2>
+
+<p>比如，一个简单的主题切换函数。正文里的 <code class="language-plaintext highlighter-rouge">theme</code> 是行内代码，下面的代码块则适合展示完整片段。</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">themes</span> <span class="o">=</span> <span class="p">[</span><span class="dl">"</span><span class="s2">cream</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">midnight</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">white</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">black</span><span class="dl">"</span><span class="p">];</span>
+
+<span class="kd">function</span> <span class="nx">switchTheme</span><span class="p">(</span><span class="nx">theme</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">themes</span><span class="p">.</span><span class="nx">includes</span><span class="p">(</span><span class="nx">theme</span><span class="p">))</span> <span class="k">return</span><span class="p">;</span>
+  <span class="nb">document</span><span class="p">.</span><span class="nx">documentElement</span><span class="p">.</span><span class="nx">dataset</span><span class="p">.</span><span class="nx">theme</span> <span class="o">=</span> <span class="nx">theme</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h2 id="用表格整理几个方向">用表格整理几个方向</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>小店</th>
+      <th>可以记录什么</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Miniature / 3D</td>
+      <td>微缩作品、建模过程、打印材料与制作记录</td>
+    </tr>
+    <tr>
+      <td>Games / Web3 / AI</td>
+      <td>游戏体验、学习笔记和工具实践</td>
+    </tr>
+    <tr>
+      <td>Projects</td>
+      <td>微信小程序、小游戏与其他练手项目</td>
+    </tr>
+  </tbody>
+</table>
+
+<blockquote>
+  <p>先完成一件小事，再给下一件事留一点空地。</p>
+</blockquote>
+
+<hr />
+
+<p>这篇示例到这里就结束了。可以去看看<a href="/journal/">全部记录</a>，也可以<a href="/">回到街区</a>，继续逛逛。</p>
+</div>
+  <ul class="post-tags" aria-label="文章标签"><li># 示例文章</li><li># 个人网站</li></ul>
+  
+</article>
+</main>
+    <footer class="content-footer">
+  <span>© Wangmmx · 自己的一小块互联网 <span class="pixel-heart" aria-hidden="true">♥</span></span>
+  <a href="/">回到街区 ↗</a>
+</footer>
+
+  </div>
+</body>
+</html>
