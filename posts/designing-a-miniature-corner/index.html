@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="zh-CN" data-theme="white">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <title>示例｜从一扇窗开始，构思微缩工作室</title>
+  <meta name="description" content="用一个桌面场景，整理空间比例、材质配色和制作顺序的构思。">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="示例｜从一扇窗开始，构思微缩工作室">
+  <meta property="og:description" content="用一个桌面场景，整理空间比例、材质配色和制作顺序的构思。">
+  <link rel="icon" type="image/png" href="/icon.png">
+  <script>
+    // Restore the saved theme before paint, including when storage is restricted.
+    try {
+      var savedTheme = localStorage.getItem('wangmmx-home-theme');
+      document.documentElement.dataset.theme = (savedTheme === 'black' || savedTheme === 'midnight') ? 'black' : 'white';
+    } catch (_) {}
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/home.css?v=20261118-neutral-work-titles">
+  <script src="/assets/js/home.js?v=20261118-neutral-work-titles" defer></script>
+  
+  <link rel="stylesheet" href="/assets/css/content.css?v=20261118-neutral-work-titles">
+  
+  <link rel="alternate" type="application/atom+xml" title="Wangmmx 的记录" href="/feed.xml">
+  <link rel="canonical" href="https://wangmmx.github.io/posts/designing-a-miniature-corner/">
+</head>
+
+<body>
+  <a class="skip-link" href="#main-content">跳到主要内容</a>
+  <div id="wangmmx-home" class="content-shell">
+    <header class="site-header">
+  <a class="logo" href="/" aria-label="Wangmmx 首页">Wangmmx</a>
+  <nav class="home-tabs" aria-label="网站导航">
+  <details class="documents-menu" name="site-navigation">
+  <summary>文档 <span aria-hidden="true">⌄</span></summary>
+  <nav class="documents-subnav" aria-label="文档分类">
+    <a href="/docs/">全部文档</a>
+    <a href="/docs/web3/">Web3</a><a href="/docs/ai/">AI</a><a href="/docs/algorithms/">算法</a><a href="/docs/pitfalls/">踩坑</a><a href="/docs/essays/">随笔</a>
+  </nav>
+</details>
+
+  
+  <details class="documents-menu" name="site-navigation">
+    <summary>微缩 <span aria-hidden="true">⌄</span></summary>
+    <nav class="documents-subnav topic-subnav" aria-label="微缩分类">
+      <a href="/miniature/painting/">涂装</a><a href="/miniature/making/">制作</a>
+    </nav>
+  </details>
+  
+  <details class="documents-menu" name="site-navigation">
+    <summary>3D <span aria-hidden="true">⌄</span></summary>
+    <nav class="documents-subnav topic-subnav" aria-label="3D分类">
+      <a href="/3d/printing/">3D打印</a><a href="/3d/modeling/">3D建模</a>
+    </nav>
+  </details>
+  
+  <details class="documents-menu" name="site-navigation">
+    <summary>游戏 <span aria-hidden="true">⌄</span></summary>
+    <nav class="documents-subnav topic-subnav" aria-label="游戏分类">
+      <a href="/games/maplestory/">冒险岛</a><a href="/games/animal-crossing/">动森</a>
+    </nav>
+  </details>
+  
+  <details class="documents-menu contact-menu" name="site-navigation">
+    <summary>联系我 <span aria-hidden="true">⌄</span></summary>
+    <nav class="documents-subnav topic-subnav" aria-label="联系我">
+      
+      
+      <a href="https://github.com/Wangmmx" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a>
+      
+      
+      <a href="https://blog.csdn.net/wangmmx725" target="_blank" rel="noopener noreferrer">CSDN <span aria-hidden="true">↗</span></a>
+      
+      
+      <span class="pending-contact">小红书 <small>待补充</small></span>
+      
+    </nav>
+  </details>
+</nav>
+
+  <div class="theme-switch" role="group" aria-label="配色">
+  <button type="button" data-theme-choice="white" aria-pressed="true" aria-label="浅色主题" title="浅色主题">
+    <svg viewBox="0 0 20 20" width="15" height="15" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="10" cy="10" r="3.3"/><path d="M10 1v2m0 14v2M1 10h2m14 0h2M3.6 3.6 5 5m10 10 1.4 1.4M3.6 16.4 5 15M15 5l1.4-1.4"/></svg>
+    <span>白</span>
+  </button>
+  <button type="button" data-theme-choice="black" aria-pressed="false" aria-label="深色主题" title="深色主题">
+    <svg viewBox="0 0 20 20" width="15" height="15" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16.8 11.8A7 7 0 0 1 8.2 3.2a7 7 0 1 0 8.6 8.6Z"/></svg>
+    <span>黑</span>
+  </button>
+</div>
+
+</header>
+
+    <main id="main-content" class="reading-main"><article class="post">
+  <div class="reading-heading">
+    <a class="back-link" href="/journal/">← 全部记录</a>
+    <p class="eyebrow">JOURNAL / 2026</p>
+    <h1>示例｜从一扇窗开始，构思微缩工作室</h1>
+    <div class="post-meta"><time datetime="2026-11-18T10:00:00+08:00">2026.11.18</time>
+      
+      <a href="/miniature/">Miniature</a><span>making</span><a href="/docs/essays/">随笔</a>
+    </div>
+    <p class="reading-description">用一个桌面场景，整理空间比例、材质配色和制作顺序的构思。</p>
+  </div>
+  <div class="prose"><blockquote>
+  <p>这是一份虚构的制作构思示例。配图为 AI 生成的展示图片，不是真实完成的手工作品。</p>
+</blockquote>
+
+<p>如果要做一间微缩工作室，我想先从窗边的一张桌子开始。它不需要装下所有工具，只需要让人一眼看出：这里有人认真做过一些喜欢的东西。</p>
+
+<!--more-->
+
+<h2 id="先确定视线落在哪里">先确定视线落在哪里</h2>
+
+<p>一个小场景里能放很多细节，但第一眼最好有一个明确的停留点。这次设想把桌面作为主体，让窗户、收纳架和墙面围绕它展开。</p>
+
+<p><img src="/assets/images/examples/miniature-workroom.png" alt="AI 生成的微缩工作室示例，窗边摆放着木色桌面和制作工具" /></p>
+
+<p><em>参考氛围：浅色墙面、木质桌面，以及少量绿色植物。图片仅用于展示构思。</em></p>
+
+<h2 id="先搭空间再加物件">先搭空间，再加物件</h2>
+
+<p>可以把制作拆成三个层次：</p>
+
+<ol>
+  <li><strong>空间骨架</strong>：地板、两面墙和窗洞，先检查整体比例。</li>
+  <li><strong>主要家具</strong>：工作桌、椅子和收纳架，确认彼此之间留有空间。</li>
+  <li><strong>生活细节</strong>：纸张、笔筒、材料盒和植物，最后决定放在哪里。</li>
+</ol>
+
+<p>这样安排，是为了避免细节做了很多，最后却发现桌子太大，或者窗户被架子挡住。</p>
+
+<h2 id="配色尽量少一些">配色尽量少一些</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>部分</th>
+      <th>构思中的颜色</th>
+      <th>希望呈现的感觉</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>墙面</td>
+      <td>暖白</td>
+      <td>给家具与小物件留出背景</td>
+    </tr>
+    <tr>
+      <td>家具</td>
+      <td>浅木色</td>
+      <td>统一主要材质</td>
+    </tr>
+    <tr>
+      <td>工具与收纳</td>
+      <td>灰色</td>
+      <td>降低零碎物件的视觉干扰</td>
+    </tr>
+    <tr>
+      <td>点缀</td>
+      <td>少量绿色</td>
+      <td>留一点生活感</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>这只是一个起点。真正动手时，可以先拿几块边角料放在一起看，再决定是否调整。</p>
+
+<h2 id="给使用痕迹留一点位置">给使用痕迹留一点位置</h2>
+
+<p>过于整齐的桌面容易像陈列柜。可以设想一张还没收起的草图、一只放在手边的材料盒，或者一把略微拉开的椅子。</p>
+
+<p>这些物件不用很多。<strong>一个能够讲清楚的小细节，往往比堆满装饰更有意思。</strong></p>
+
+<h2 id="为下一次调整留余地">为下一次调整留余地</h2>
+
+<p>在构思阶段，窗户、家具和墙面装饰都可以暂时不固定。先从不同角度观察，拍下几张照片，再决定哪些部分需要修改。</p>
+
+<p>这个小场景也不必一次完成。先做好一扇窗、一张桌子，剩下的细节可以慢慢添进去。</p>
+</div>
+  <ul class="post-tags" aria-label="文章标签"><li># 示例文章</li><li># 微缩场景</li><li># 制作构思</li></ul>
+  
+  <nav class="post-pagination" aria-label="相邻文章">
+    <a href="/posts/a-place-for-ideas/"><small>← 上一篇</small>示例｜给想法留一个落脚点</a>
+    <a href="/posts/a-small-workflow-with-ai/"><small>下一篇 →</small>示例｜把一个小想法交给 AI 之前</a>
+  </nav>
+  
+</article>
+</main>
+    <footer class="content-footer">
+  <span>© Wangmmx · 自己的一小块互联网 <span class="pixel-heart" aria-hidden="true">♥</span></span>
+  <a href="/">回到街区 ↗</a>
+</footer>
+
+  </div>
+</body>
+</html>

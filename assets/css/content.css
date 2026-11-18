@@ -23,7 +23,7 @@
 #wangmmx-home.content-shell .entry-row { display:grid; grid-template-columns:100px minmax(0,1fr); gap:24px; padding:28px 0; border-bottom:1px solid var(--line); }
 #wangmmx-home.content-shell .entry-row time { color:var(--muted); font-size:11px; padding-top:7px; }
 #wangmmx-home.content-shell .entry-row h2 { font-size:19px; line-height:1.6; font-weight:500; margin:0; overflow-wrap:anywhere; }
-#wangmmx-home.content-shell .entry-row h2 a { text-decoration:none; color:var(--fg); }
+#wangmmx-home.content-shell .entry-row h2 a { text-decoration:none; color:var(--work-title); }
 #wangmmx-home.content-shell .entry-row h2 a:hover { color:var(--accent); }
 #wangmmx-home.content-shell .entry-row h2 span { font-size:13px; color:var(--accent); }
 #wangmmx-home.content-shell .entry-row p { margin:9px 0 0; color:var(--muted); font-size:12px; line-height:1.9; overflow-wrap:anywhere; }

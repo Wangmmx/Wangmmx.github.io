@@ -789,7 +789,6 @@ body { position: relative; isolation: isolate; display: flow-root; }
 /* Three editorial collections below the town: writing, pictures and things to try. */
 #wangmmx-home .home-collection { padding:38px 0; border-top:1px solid var(--line); }
 #wangmmx-home .collection-heading { display:flex; align-items:flex-end; justify-content:space-between; gap:18px; }
-#wangmmx-home .collection-kicker { font-size:9px; letter-spacing:1.5px; color:var(--accent); }
 #wangmmx-home .collection-heading h2 { margin:9px 0 0; font-size:21px; font-weight:500; line-height:1.5; }
 #wangmmx-home .collection-heading > a { font-size:11px; color:var(--muted); text-decoration:none; white-space:nowrap; }
 #wangmmx-home .collection-heading > a:hover { color:var(--accent); }
@@ -894,7 +893,7 @@ html.gallery-modal-open { overflow:hidden; scrollbar-gutter:stable; }
 #wangmmx-home .map-instructions { margin:0; text-align:center; line-height:1.8; }
 #wangmmx-home .walk-buttons { justify-self:end; }
 #wangmmx-home .collection-heading-copy { min-width:0; flex:1; }
-#wangmmx-home .collection-title-line { display:flex; align-items:baseline; gap:18px; min-width:0; margin-top:9px; }
+#wangmmx-home .collection-title-line { display:flex; align-items:baseline; gap:18px; min-width:0; margin-top:0; }
 #wangmmx-home .collection-title-line h2 { margin:0; flex-shrink:0; }
 #wangmmx-home .collection-title-line .collection-summary { margin:0; min-width:0; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
 #wangmmx-home .home-collection .collection-heading { margin-bottom:25px; }
@@ -929,3 +928,40 @@ html.gallery-modal-open { overflow:hidden; scrollbar-gutter:stable; }
   #wangmmx-home .home-tabs { gap:2px; }
   #wangmmx-home .documents-subnav { min-width:168px; }
 }
+
+
+/* Subtle colors connect each collection's heading, links and works. */
+:root[data-theme="white"] { --articles-color:#376a8b; }
+:root[data-theme="black"] { --articles-color:#91bfdf; }
+#wangmmx-home #article-collections { --collection-color:var(--articles-color); }
+#wangmmx-home #picture-collections { --collection-color:var(--articles-color); }
+#wangmmx-home #promotion-collections { --collection-color:var(--articles-color); }
+#wangmmx-home .home-collection .collection-heading > a,
+#wangmmx-home .home-collection .collection-arrow,
+#wangmmx-home .home-collection .promotion-card a,
+#wangmmx-home .home-collection .promotion-type { color:var(--collection-color); }
+#wangmmx-home .home-collection .collection-heading > a:hover,
+#wangmmx-home .home-collection .home-article-row h3 a:hover { text-decoration:underline; text-underline-offset:4px; }
+#wangmmx-home .home-collection .promotion-card { background:var(--bg); }
+
+/* Keep collection titles consistent with Articles. */
+#wangmmx-home .home-collection .collection-heading h2 { color:var(--articles-color); }
+
+
+/* Softer header typography, with clear hover and keyboard states. */
+:root[data-theme="white"] { --nav-text:#65717d; --nav-active:#465360; }
+:root[data-theme="black"] { --nav-text:#b0b8c2; --nav-active:#dce2e9; }
+#wangmmx-home header .logo,
+#wangmmx-home .documents-menu > summary { color:var(--nav-text); }
+#wangmmx-home header .logo:hover,
+#wangmmx-home .documents-menu > summary:hover,
+#wangmmx-home .documents-menu[open] > summary { color:var(--nav-active); }
+
+
+/* Works use neutral titles; collection headings and navigation keep blue accents. */
+:root[data-theme="white"] { --work-title:#46515e; }
+:root[data-theme="black"] { --work-title:#d5dce5; }
+#wangmmx-home .home-article-row h3 a,
+#wangmmx-home .gallery-card h3,
+#wangmmx-home .promotion-card h3 { color:var(--work-title); }
+#wangmmx-home .home-article-row h3 a:hover { color:var(--articles-color); }

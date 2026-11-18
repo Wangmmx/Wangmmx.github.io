@@ -1,4 +1,148 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="https://wangmmx.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://wangmmx.github.io/" rel="alternate" type="text/html" /><updated>2026-11-18T19:16:42+08:00</updated><id>https://wangmmx.github.io/feed.xml</id><title type="html">Wangmmx · 个人空间</title><subtitle>代码、Web3、微缩模型与生活，Wangmmx 的个人小空间。</subtitle><author><name>https://github.com/Wangmmx</name></author><entry><title type="html">示例｜给想法留一个落脚点</title><link href="https://wangmmx.github.io/posts/a-place-for-ideas/" rel="alternate" type="text/html" title="示例｜给想法留一个落脚点" /><published>2026-11-18T09:00:00+08:00</published><updated>2026-11-18T09:00:00+08:00</updated><id>https://wangmmx.github.io/posts/a-place-for-ideas</id><content type="html" xml:base="https://wangmmx.github.io/posts/a-place-for-ideas/">&lt;blockquote&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="https://wangmmx.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://wangmmx.github.io/" rel="alternate" type="text/html" /><updated>2026-11-18T20:33:23+08:00</updated><id>https://wangmmx.github.io/feed.xml</id><title type="html">Wangmmx · 个人空间</title><subtitle>代码、Web3、微缩模型与生活，Wangmmx 的个人小空间。</subtitle><author><name>https://github.com/Wangmmx</name></author><entry><title type="html">示例｜把一个小想法交给 AI 之前</title><link href="https://wangmmx.github.io/posts/a-small-workflow-with-ai/" rel="alternate" type="text/html" title="示例｜把一个小想法交给 AI 之前" /><published>2026-11-18T11:00:00+08:00</published><updated>2026-11-18T11:00:00+08:00</updated><id>https://wangmmx.github.io/posts/a-small-workflow-with-ai</id><content type="html" xml:base="https://wangmmx.github.io/posts/a-small-workflow-with-ai/">&lt;blockquote&gt;
+  &lt;p&gt;这是一篇虚构的内容示例，用来预览文章排版，并非真实项目复盘。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;“帮我做一个小工具”听起来很明确，真正开始时却会遇到很多选择：给谁用、解决什么问题、第一版做到哪里。与 AI 协作前，先把这些问题写下来，往往更容易找到起点。&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;h2 id=&quot;先描述使用场景&quot;&gt;先描述使用场景&lt;/h2&gt;
+
+&lt;p&gt;假设想做一个收纳微缩材料的小工具。比起直接列功能，可以先写一段场景：&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;买了一批材料，过一段时间却忘记放在哪里。希望用名称搜索，就能找到对应的收纳盒。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;这段话已经给出了第一版的核心：&lt;strong&gt;记录材料与位置，并能快速检索&lt;/strong&gt;。至于库存统计、图片识别和云端同步，可以稍后再考虑。&lt;/p&gt;
+
+&lt;h2 id=&quot;给第一版划一个边界&quot;&gt;给第一版划一个边界&lt;/h2&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;问题&lt;/th&gt;
+      &lt;th&gt;示例约束&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;记录什么&lt;/td&gt;
+      &lt;td&gt;材料名称、收纳位置、一句备注&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;怎样查找&lt;/td&gt;
+      &lt;td&gt;输入关键词，显示匹配结果&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;怎样完成&lt;/td&gt;
+      &lt;td&gt;可以新增、修改、删除和搜索&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;暂缓什么&lt;/td&gt;
+      &lt;td&gt;登录、多设备同步与复杂统计&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;边界不是限制想象力，而是让这一次尝试有一个能够完成的终点。&lt;/p&gt;
+
+&lt;h2 id=&quot;把需求写成可以检查的句子&quot;&gt;把需求写成可以检查的句子&lt;/h2&gt;
+
+&lt;p&gt;可以把“搜索要好用”改成几条具体条件：&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;输入材料名称的一部分，能够找到对应记录。&lt;/li&gt;
+  &lt;li&gt;没有结果时，显示清楚的提示。&lt;/li&gt;
+  &lt;li&gt;修改收纳位置后，再次搜索能够看到新位置。&lt;/li&gt;
+  &lt;li&gt;删除前有确认步骤，避免误操作。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;每一句都可以对应一次实际操作。这样，无论由自己实现，还是让 AI 协助，都更容易判断结果是否符合预期。&lt;/p&gt;
+
+&lt;h2 id=&quot;每次只推进一个小环节&quot;&gt;每次只推进一个小环节&lt;/h2&gt;
+
+&lt;p&gt;先完成录入，再检查搜索，最后调整页面。每完成一步，留下当前结果和仍未解决的问题。与其一次加入所有设想，不如让每个小版本都可以被体验和评价。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;工具可以加快实现，判断仍然需要自己完成。&lt;/strong&gt; 哪些功能值得保留、交互是否自然、信息是否清楚，这些都适合在使用过程中慢慢打磨。&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;下一次有了新想法，可以先写三句话：它解决什么问题、第一版包含什么、怎样才算完成。&lt;/p&gt;</content><author><name>https://github.com/Wangmmx</name></author><category term="示例文章" /><category term="AI" /><category term="开发思路" /><summary type="html">这是一篇虚构的内容示例，用来预览文章排版，并非真实项目复盘。 “帮我做一个小工具”听起来很明确，真正开始时却会遇到很多选择：给谁用、解决什么问题、第一版做到哪里。与 AI 协作前，先把这些问题写下来，往往更容易找到起点。</summary></entry><entry><title type="html">示例｜从一扇窗开始，构思微缩工作室</title><link href="https://wangmmx.github.io/posts/designing-a-miniature-corner/" rel="alternate" type="text/html" title="示例｜从一扇窗开始，构思微缩工作室" /><published>2026-11-18T10:00:00+08:00</published><updated>2026-11-18T10:00:00+08:00</updated><id>https://wangmmx.github.io/posts/designing-a-miniature-corner</id><content type="html" xml:base="https://wangmmx.github.io/posts/designing-a-miniature-corner/">&lt;blockquote&gt;
+  &lt;p&gt;这是一份虚构的制作构思示例。配图为 AI 生成的展示图片，不是真实完成的手工作品。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;如果要做一间微缩工作室，我想先从窗边的一张桌子开始。它不需要装下所有工具，只需要让人一眼看出：这里有人认真做过一些喜欢的东西。&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;h2 id=&quot;先确定视线落在哪里&quot;&gt;先确定视线落在哪里&lt;/h2&gt;
+
+&lt;p&gt;一个小场景里能放很多细节，但第一眼最好有一个明确的停留点。这次设想把桌面作为主体，让窗户、收纳架和墙面围绕它展开。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/examples/miniature-workroom.png&quot; alt=&quot;AI 生成的微缩工作室示例，窗边摆放着木色桌面和制作工具&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;参考氛围：浅色墙面、木质桌面，以及少量绿色植物。图片仅用于展示构思。&lt;/em&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;先搭空间再加物件&quot;&gt;先搭空间，再加物件&lt;/h2&gt;
+
+&lt;p&gt;可以把制作拆成三个层次：&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;&lt;strong&gt;空间骨架&lt;/strong&gt;：地板、两面墙和窗洞，先检查整体比例。&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;主要家具&lt;/strong&gt;：工作桌、椅子和收纳架，确认彼此之间留有空间。&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;生活细节&lt;/strong&gt;：纸张、笔筒、材料盒和植物，最后决定放在哪里。&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;这样安排，是为了避免细节做了很多，最后却发现桌子太大，或者窗户被架子挡住。&lt;/p&gt;
+
+&lt;h2 id=&quot;配色尽量少一些&quot;&gt;配色尽量少一些&lt;/h2&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;部分&lt;/th&gt;
+      &lt;th&gt;构思中的颜色&lt;/th&gt;
+      &lt;th&gt;希望呈现的感觉&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;墙面&lt;/td&gt;
+      &lt;td&gt;暖白&lt;/td&gt;
+      &lt;td&gt;给家具与小物件留出背景&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;家具&lt;/td&gt;
+      &lt;td&gt;浅木色&lt;/td&gt;
+      &lt;td&gt;统一主要材质&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;工具与收纳&lt;/td&gt;
+      &lt;td&gt;灰色&lt;/td&gt;
+      &lt;td&gt;降低零碎物件的视觉干扰&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;点缀&lt;/td&gt;
+      &lt;td&gt;少量绿色&lt;/td&gt;
+      &lt;td&gt;留一点生活感&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;这只是一个起点。真正动手时，可以先拿几块边角料放在一起看，再决定是否调整。&lt;/p&gt;
+
+&lt;h2 id=&quot;给使用痕迹留一点位置&quot;&gt;给使用痕迹留一点位置&lt;/h2&gt;
+
+&lt;p&gt;过于整齐的桌面容易像陈列柜。可以设想一张还没收起的草图、一只放在手边的材料盒，或者一把略微拉开的椅子。&lt;/p&gt;
+
+&lt;p&gt;这些物件不用很多。&lt;strong&gt;一个能够讲清楚的小细节，往往比堆满装饰更有意思。&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;为下一次调整留余地&quot;&gt;为下一次调整留余地&lt;/h2&gt;
+
+&lt;p&gt;在构思阶段，窗户、家具和墙面装饰都可以暂时不固定。先从不同角度观察，拍下几张照片，再决定哪些部分需要修改。&lt;/p&gt;
+
+&lt;p&gt;这个小场景也不必一次完成。先做好一扇窗、一张桌子，剩下的细节可以慢慢添进去。&lt;/p&gt;</content><author><name>https://github.com/Wangmmx</name></author><category term="示例文章" /><category term="微缩场景" /><category term="制作构思" /><summary type="html">这是一份虚构的制作构思示例。配图为 AI 生成的展示图片，不是真实完成的手工作品。 如果要做一间微缩工作室，我想先从窗边的一张桌子开始。它不需要装下所有工具，只需要让人一眼看出：这里有人认真做过一些喜欢的东西。</summary></entry><entry><title type="html">示例｜给想法留一个落脚点</title><link href="https://wangmmx.github.io/posts/a-place-for-ideas/" rel="alternate" type="text/html" title="示例｜给想法留一个落脚点" /><published>2026-11-18T09:00:00+08:00</published><updated>2026-11-18T09:00:00+08:00</updated><id>https://wangmmx.github.io/posts/a-place-for-ideas</id><content type="html" xml:base="https://wangmmx.github.io/posts/a-place-for-ideas/">&lt;blockquote&gt;
   &lt;p&gt;这是一篇排版示例，用来预览文章列表和详情页，可以随时替换或删除。&lt;/p&gt;
 &lt;/blockquote&gt;
 
