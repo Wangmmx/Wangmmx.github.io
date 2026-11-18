@@ -319,25 +319,25 @@
 
 :root[data-theme="white"]  {
   
-  --bg: #ffffff;
-   --fg: #282d30;
-   --muted: #69747a;
+  --bg: #fbfcfe;
+   --fg: #252d38;
+   --muted: #626f7e;
   
-  --line: #e1e5e7;
-   --accent: #547c76;
-   --soft: #eef3f1;
+  --line: #e0e6ed;
+   --accent: #426d8b;
+   --soft: #edf2f7;
   
 }
 
 :root[data-theme="black"]  {
   
-  --bg: #111111;
-   --fg: #ededeb;
-   --muted: #a2a7a4;
+  --bg: #14181f;
+   --fg: #e9eef4;
+   --muted: #adb8c6;
   
-  --line: #343735;
-   --accent: #b7c7ac;
-   --soft: #242b23;
+  --line: #303946;
+   --accent: #a6c9e4;
+   --soft: #222c39;
   
   color-scheme: dark;
   
@@ -868,23 +868,24 @@ html.gallery-modal-open { overflow:hidden; scrollbar-gutter:stable; }
 /* Document navigation, separate from the six physical shops in the town. */
 #wangmmx-home .documents-menu { position:relative; }
 #wangmmx-home .documents-menu > summary {
-  display:flex; gap:6px; align-items:center; list-style:none; padding:7px 10px;
-  border-radius:5px; color:var(--muted); font-size:11px; line-height:1.6;
+  display:flex; gap:6px; align-items:center; list-style:none; padding:9px 12px;
+  border-radius:7px; color:var(--fg); font-size:15px; font-weight:500; line-height:1.6;
 }
 #wangmmx-home .documents-menu > summary::-webkit-details-marker { display:none; }
-#wangmmx-home .documents-menu > summary span { font-size:11px; }
+#wangmmx-home .documents-menu > summary span { font-size:13px; opacity:.6; transition:transform .15s ease; }
+#wangmmx-home .documents-menu[open] > summary span { transform:rotate(180deg); }
 #wangmmx-home .documents-menu[open] > summary,
 #wangmmx-home .documents-menu > summary:hover { color:var(--fg); background:var(--soft); }
 #wangmmx-home .documents-menu > summary:focus-visible { outline:2px solid var(--accent); outline-offset:3px; }
 #wangmmx-home .documents-subnav {
-  position:absolute; top:calc(100% + 8px); left:0; z-index:10000; min-width:144px;
-  display:flex; flex-direction:column; gap:2px; padding:6px;
-  border:1px solid var(--line); border-radius:6px; background:var(--bg); box-shadow:0 8px 24px #00000012;
+  position:absolute; top:calc(100% + 8px); left:0; z-index:10000; min-width:184px;
+  display:flex; flex-direction:column; gap:3px; padding:8px;
+  border:1px solid var(--line); border-radius:10px; background:var(--menu-bg); box-shadow:0 12px 32px var(--menu-shadow);
 }
-#wangmmx-home .documents-subnav a { display:block; padding:8px 10px; font-size:11px; color:var(--muted); text-decoration:none; white-space:nowrap; border-radius:3px; }
+#wangmmx-home .documents-subnav a { display:flex; align-items:center; gap:16px; min-height:42px; padding:10px 14px; font-size:14px; line-height:1.6; color:var(--fg); text-decoration:none; white-space:nowrap; border-radius:6px; }
 #wangmmx-home .documents-subnav a:hover { background:var(--soft); color:var(--fg); }
-#wangmmx-home .documents-subnav a:first-child { border-bottom:1px solid var(--line); border-radius:0; padding-bottom:10px; margin-bottom:2px; }
-@media(max-width:650px) { #wangmmx-home .documents-menu > summary { padding:5px 8px; font-size:10px; } }
+#wangmmx-home .documents-subnav a:first-child { border-bottom:1px solid var(--line); border-radius:0; padding-bottom:12px; margin-bottom:4px; }
+@media(max-width:650px) { #wangmmx-home .documents-menu > summary { padding:8px 9px; font-size:13px; } }
 
 
 /* Keep the walking hint directly below the visible map, centered on the town. */
@@ -892,24 +893,39 @@ html.gallery-modal-open { overflow:hidden; scrollbar-gutter:stable; }
 #wangmmx-home .neighborhood-controls { display:grid; grid-template-columns:1fr auto; align-items:center; gap:12px; margin-top:6px; }
 #wangmmx-home .map-instructions { margin:0; text-align:center; line-height:1.8; }
 #wangmmx-home .walk-buttons { justify-self:end; }
-#wangmmx-home .article-collection-title { min-width:0; flex:1; }
+#wangmmx-home .collection-heading-copy { min-width:0; flex:1; }
 #wangmmx-home .collection-title-line { display:flex; align-items:baseline; gap:18px; min-width:0; margin-top:9px; }
 #wangmmx-home .collection-title-line h2 { margin:0; flex-shrink:0; }
 #wangmmx-home .collection-title-line .collection-summary { margin:0; min-width:0; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
-#wangmmx-home #article-collections .collection-heading { margin-bottom:25px; }
+#wangmmx-home .home-collection .collection-heading { margin-bottom:25px; }
 @media(max-width:650px) {
   #wangmmx-home .neighborhood-controls { grid-template-columns:1fr; gap:6px; }
   #wangmmx-home .walk-buttons { justify-self:center; }
   #wangmmx-home .collection-title-line { gap:10px; }
   #wangmmx-home .collection-title-line .collection-summary { font-size:10px; }
-  #wangmmx-home #article-collections .collection-heading { gap:10px; }
+  #wangmmx-home .home-collection .collection-heading { gap:10px; }
 }
 
 
 /* Shared topic menus on the homepage and reading pages. */
 #wangmmx-home .documents-menu > summary { cursor:pointer; }
-#wangmmx-home .topic-subnav a:first-child { border-bottom:0; border-radius:3px; padding:8px 10px; margin:0; }
-#wangmmx-home .pending-contact { display:flex; align-items:center; gap:12px; padding:8px 10px; color:var(--muted); font-size:11px; white-space:nowrap; }
-#wangmmx-home .pending-contact small { font-size:9px; opacity:.7; }
+#wangmmx-home .topic-subnav a:first-child { border-bottom:0; border-radius:6px; padding:10px 14px; margin:0; }
+#wangmmx-home .pending-contact { display:flex; align-items:center; gap:16px; min-height:42px; padding:10px 14px; color:var(--muted); font-size:14px; white-space:nowrap; }
+#wangmmx-home .pending-contact small { font-size:11px; opacity:.7; }
 #wangmmx-home .contact-menu .documents-subnav { left:auto; right:0; }
 #wangmmx-home .documents-subnav [aria-current="page"] { color:var(--fg); background:var(--soft); }
+
+
+/* A little breathing room and a cooler, quieter light/dark palette. */
+:root[data-theme="white"] { --menu-bg:#ffffff; --menu-shadow:#273c5520; }
+:root[data-theme="black"] { --menu-bg:#1c232d; --menu-shadow:#00000050; }
+#wangmmx-home { padding-bottom:32px; }
+#wangmmx-home > footer { margin-top:24px; padding:32px 0 64px; font-size:11px; line-height:1.8; }
+#wangmmx-home .documents-subnav a:focus-visible { outline:2px solid var(--accent); outline-offset:-2px; background:var(--soft); }
+#wangmmx-home .documents-subnav a > span { margin-left:auto; color:var(--muted); }
+@media(max-width:650px) {
+  #wangmmx-home > footer { margin-top:16px; padding:28px 0 48px; font-size:10px; flex-wrap:wrap; }
+  #wangmmx-home { padding-bottom:20px; }
+  #wangmmx-home .home-tabs { gap:2px; }
+  #wangmmx-home .documents-subnav { min-width:168px; }
+}
