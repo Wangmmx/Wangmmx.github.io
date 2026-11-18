@@ -45,6 +45,11 @@
     return { id: sign.dataset.place, plot, x, entryX, corridorX, y: baseY - 60,
       baseY, proportions: proportionsForShop, roof: roofs[i % roofs.length], scale: 0.52, entrance: baseY + 12 };
   });
+  // Widely separated RGB IDs survive edge antialiasing; tiny red IDs did not.
+  const shopHitColors=shops.map((_,index)=>{
+    const code=((index+1)*0x9e3779)&0xffffff;
+    return [(code>>>16)&255,(code>>>8)&255,code&255];
+  });
   // The CBD curb meets the inner ring; the two rings share a left/right axis.
   const cbdBlock={left:292,right:550,top:241,bottom:284};
   const roadAxis=(cbdBlock.left+cbdBlock.right)/2;
@@ -151,6 +156,7 @@
   });
   const player = { x: 300, y: streetY, facing:'front',angle:Math.PI/2,targetAngle:Math.PI/2,walkDistance:0 };
   const detail = document.getElementById('neighborhood-detail');
+  const intro = document.querySelector('.home-top main .intro');
   const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
   let path = [], visiting = null, selected = null, animation = null, previousTime = 0;
   let dark = false;
@@ -194,12 +200,15 @@
     ctx.fillStyle = color; ctx.beginPath();
     points.forEach((p, i) => i ? ctx.lineTo(Math.round(p.x), Math.round(p.y)) : ctx.moveTo(Math.round(p.x), Math.round(p.y)));
     ctx.closePath(); ctx.fill();
-    if(hitCtx&&hitShop>=0) {
-      hitCtx.fillStyle=`rgb(${hitShop+1},0,0)`;hitCtx.beginPath();
+    if(hitCtx) {
+      // Paint occluders too, so a tree or landmark cannot select an obscured store.
+      const color=hitShop>=0?shopHitColors[hitShop]:[0,0,0];
+      hitCtx.fillStyle=`rgb(${color.join(',')})`;hitCtx.beginPath();
       points.forEach((p,i)=>i?hitCtx.lineTo(Math.round(p.x),Math.round(p.y)):hitCtx.moveTo(Math.round(p.x),Math.round(p.y)));
       hitCtx.closePath();hitCtx.fill();
     }
   }
+
   function ground(points, color, z = 0) { polygon(points.map(([x,y]) => project(x,y,z)),color); }
   // Every block has a lit top, a warm front and a shaded right side.
   function block(x, y, w, d, h, colors, z = 0) {
@@ -700,6 +709,8 @@
   function showPlace(id) {
     selected = id; stage.dataset.location = id;
     signs.forEach(sign => sign.setAttribute('aria-expanded', String(sign.dataset.place === id)));
+    window.dispatchEvent(new Event('home:shop-open'));
+    if(intro) intro.hidden=true;
     detail.hidden = false;
     detail.querySelectorAll('[data-story]').forEach(story => { story.hidden = story.dataset.story !== id; });
   }
@@ -724,6 +735,8 @@
   }
   function go(x, y, place = null, auto = false) {
     if(!auto) manualControl();
+    // Show the shop immediately; walking and reading are independent.
+    if(place&&!auto) {showPlace(place);place=null;}
     const next = route(x, y); if (!next.length) { if (place && Math.hypot(player.x - x, player.y - y) < 16) showPlace(place);scheduleWander(idleRemaining()); return; }
     automatic=auto;stage.dataset.walkMode=auto?'auto':'manual';
     path = next; visiting = place;
@@ -741,10 +754,23 @@
     const box=canvas.getBoundingClientRect();
     return {px:(event.clientX-box.left)/box.width*1000,py:(event.clientY-box.top)/box.height*640};
   }
+  function matchShopPixel(pixel) {
+    if(pixel[3]<160) return null;
+    const index=shopHitColors.findIndex(color=>color.every((value,c)=>Math.abs(value-pixel[c])<=3));
+    return shops[index]||null;
+  }
   function pointedShop(p) {
     if(!hitCtx||p.px<0||p.py<0||p.px>=1000||p.py>=640) return null;
-    const index=hitCtx.getImageData(Math.floor(p.px),Math.floor(p.py),1,1).data[0]-1;
-    return shops[index]||null;
+    const cx=Math.floor(p.px),cy=Math.floor(p.py),left=Math.max(0,cx-1),top=Math.max(0,cy-1);
+    const width=Math.min(999,cx+1)-left+1,height=Math.min(639,cy+1)-top+1;
+    const pixels=hitCtx.getImageData(left,top,width,height).data;
+    for(const [dx,dy] of [[0,0],[-1,0],[1,0],[0,-1],[0,1],[-1,-1],[1,-1],[-1,1],[1,1]]) {
+      const x=cx+dx-left,y=cy+dy-top;
+      if(x<0||y<0||x>=width||y>=height) continue;
+      const offset=(y*width+x)*4,shop=matchShopPixel(pixels.subarray(offset,offset+4));
+      if(shop) return shop;
+    }
+    return null;
   }
   canvas.addEventListener('pointermove',event=>stage.classList.toggle('is-over-shop',Boolean(pointedShop(pointer(event)))));
   canvas.addEventListener('pointerleave',()=>stage.classList.remove('is-over-shop'));
@@ -763,7 +789,15 @@
     if (direction) { event.preventDefault(); walk(direction); }
   });
   document.querySelectorAll('[data-walk]').forEach(button => button.addEventListener('click', () => walk(button.dataset.walk)));
-  detail.querySelector('.close-place').addEventListener('click', () => { detail.hidden = true; signs.forEach(sign => sign.setAttribute('aria-expanded', 'false')); if (selected) signs.find(sign => sign.dataset.place === selected).focus();scheduleWander(idleRemaining()); });
+  detail.querySelector('.close-place').addEventListener('click', () => {
+    detail.hidden=true;visiting=null;
+    if(intro) intro.hidden=false;
+    signs.forEach(sign=>sign.setAttribute('aria-expanded','false'));
+    const sign=signs.find(sign=>sign.dataset.place===selected);
+    if(sign) sign.focus({preventScroll:true});
+    scheduleWander(idleRemaining());
+  });
+  window.addEventListener('home:panel-open',()=>{visiting=null;selected=null;delete stage.dataset.location;});
   document.addEventListener('click',manualControl,true);
   new MutationObserver(draw).observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme'] });
   reducedMotion.addEventListener?.('change',()=>{

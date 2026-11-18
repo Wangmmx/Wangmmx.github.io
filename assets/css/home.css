@@ -317,20 +317,6 @@
   
 }
 
-:root[data-theme="midnight"]  {
-  
-  --bg: #222c3c;
-   --fg: #e7e9e4;
-   --muted: #a5b3c1;
-  
-  --line: #43546a;
-   --accent: #7acbdc;
-   --soft: #344657;
-  
-  color-scheme: dark;
-  
-}
-
 :root[data-theme="white"]  {
   
   --bg: #ffffff;
@@ -723,3 +709,198 @@ body { position: relative; isolation: isolate; display: flow-root; }
 
 #wangmmx-home .home-journal-link { font-size:11px; color:var(--muted); text-decoration:none; white-space:nowrap; }
 #wangmmx-home .home-journal-link:hover { color:var(--accent); }
+
+
+/* Selected shop information belongs to the left column, beside the fixed town. */
+#wangmmx-home .home-top > .neighborhood { align-self:start; }
+#wangmmx-home .home-top main .neighborhood-detail {
+  display:block; position:relative; min-width:0;
+  margin:28px 0 0; padding:24px 0 0; border-top:1px solid var(--line);
+}
+#wangmmx-home .home-top main .neighborhood-detail[hidden] { display:none; }
+#wangmmx-home .home-top main .neighborhood-detail .detail-tag {
+  display:block; max-width:calc(100% - 30px); font-size:9px;
+  letter-spacing:1.5px; line-height:1.8; overflow-wrap:anywhere;
+}
+#wangmmx-home .home-top main .place-story h3 { font-size:22px; margin:12px 0; overflow-wrap:anywhere; }
+#wangmmx-home .home-top main .place-story p { font-size:12px; line-height:1.9; }
+#wangmmx-home .home-top main .place-entry { margin-top:16px; }
+#wangmmx-home .home-top main .close-place {
+  position:absolute; top:20px; right:0; min-width:28px; min-height:28px; padding:0;
+}
+@media(max-width:650px) {
+  #wangmmx-home .home-top main .neighborhood-detail { margin-top:16px; padding-top:16px; }
+  #wangmmx-home .home-top main .neighborhood-detail .detail-tag { font-size:8px; letter-spacing:.5px; }
+  #wangmmx-home .home-top main .place-story h3 { font-size:16px; }
+  #wangmmx-home .home-top main .place-story p { font-size:10px; line-height:1.8; }
+  #wangmmx-home .home-top main .place-entry { font-size:10px; }
+  #wangmmx-home .home-top main .close-place { top:12px; min-width:24px; min-height:24px; }
+}
+
+
+/* Two discreet theme choices, shared by the homepage and reading pages. */
+:root[data-theme="white"] { color-scheme:light; }
+#wangmmx-home .theme-switch {
+  margin-left:auto; flex-shrink:0; display:flex; align-items:center; gap:2px;
+  padding:3px; border:1px solid var(--line); border-radius:7px; background:var(--soft);
+}
+#wangmmx-home .theme-switch button {
+  display:inline-flex; align-items:center; justify-content:center; gap:5px;
+  border:0; border-radius:4px; padding:6px 8px; background:transparent;
+  color:var(--muted); font-size:10px; line-height:1.4;
+}
+#wangmmx-home .theme-switch button[aria-pressed="true"] { color:var(--fg); background:var(--bg); box-shadow:0 1px 3px #00000014; }
+#wangmmx-home .theme-switch button:focus-visible,
+#wangmmx-home .home-tabs button:focus-visible { outline:2px solid var(--accent); outline-offset:3px; }
+#wangmmx-home > header { gap:18px; }
+#wangmmx-home .home-tabs { display:flex; flex-wrap:wrap; gap:5px; align-items:center; }
+#wangmmx-home .home-tabs button {
+  border:0; padding:7px 10px; border-radius:5px; color:var(--muted);
+  background:transparent; font-size:11px; line-height:1.6; white-space:nowrap;
+}
+#wangmmx-home .home-tabs button:hover { color:var(--fg); background:var(--soft); }
+#wangmmx-home .home-tabs button[aria-expanded="true"] { color:var(--fg); background:var(--soft); }
+#wangmmx-home .home-top main .intro[hidden] { display:none; }
+#wangmmx-home .home-top main .neighborhood-detail { margin:0; padding:0; border:0; }
+#wangmmx-home .home-top main .close-place { top:-4px; }
+#wangmmx-home .home-top main .expanded {
+  position:relative; margin:0; padding:0; border:0; display:block;
+}
+#wangmmx-home .home-top main .expanded[hidden] { display:none; }
+#wangmmx-home .home-top main .expanded .detail-tag { display:block; max-width:calc(100% - 30px); overflow-wrap:anywhere; font-size:9px; letter-spacing:1.5px; line-height:1.8; }
+#wangmmx-home .home-top main .expanded h2 { font-size:22px; line-height:1.6; margin:12px 0; }
+#wangmmx-home .home-top main .expanded p { font-size:12px; line-height:1.9; }
+#wangmmx-home .home-top main .expanded .external { display:flex; flex-wrap:wrap; gap:12px; font-size:11px; }
+#wangmmx-home .home-top main .expanded .close { position:absolute; top:-4px; right:0; min-width:28px; min-height:28px; padding:0; }
+@media(max-width:650px) {
+  #wangmmx-home > header { height:auto; min-height:73px; flex-wrap:wrap; gap:8px 12px; padding:12px 0; }
+  #wangmmx-home > header .logo { font-size:23px; }
+  #wangmmx-home .home-tabs { order:4; width:100%; gap:4px; }
+  #wangmmx-home .home-tabs button { padding:5px 8px; font-size:10px; }
+  #wangmmx-home .home-journal-link { margin-left:auto; font-size:10px; }
+  #wangmmx-home .theme-switch { margin-left:0; }
+  #wangmmx-home .theme-switch button { padding:5px 7px; }
+  #wangmmx-home .home-top main .expanded h2 { font-size:16px; }
+  #wangmmx-home .home-top main .expanded p { font-size:10px; line-height:1.8; }
+  #wangmmx-home .home-top main .expanded .external { font-size:10px; }
+}
+
+
+/* Three editorial collections below the town: writing, pictures and things to try. */
+#wangmmx-home .home-collection { padding:38px 0; border-top:1px solid var(--line); }
+#wangmmx-home .collection-heading { display:flex; align-items:flex-end; justify-content:space-between; gap:18px; }
+#wangmmx-home .collection-kicker { font-size:9px; letter-spacing:1.5px; color:var(--accent); }
+#wangmmx-home .collection-heading h2 { margin:9px 0 0; font-size:21px; font-weight:500; line-height:1.5; }
+#wangmmx-home .collection-heading > a { font-size:11px; color:var(--muted); text-decoration:none; white-space:nowrap; }
+#wangmmx-home .collection-heading > a:hover { color:var(--accent); }
+#wangmmx-home .collection-summary { margin:12px 0 25px; font-size:12px; line-height:1.9; color:var(--muted); }
+#wangmmx-home .home-article-row { display:grid; grid-template-columns:100px minmax(0,1fr) 24px; gap:24px; padding:22px 0; border-top:1px solid var(--line); align-items:start; }
+#wangmmx-home .home-article-row time { padding-top:5px; color:var(--muted); font-size:10px; }
+#wangmmx-home .home-article-row h3 { margin:0; font-size:17px; font-weight:500; line-height:1.6; overflow-wrap:anywhere; }
+#wangmmx-home .home-article-row h3 a { text-decoration:none; }
+#wangmmx-home .home-article-row h3 a:hover { color:var(--accent); }
+#wangmmx-home .home-article-row p { margin:9px 0 0; color:var(--muted); font-size:12px; line-height:1.9; }
+#wangmmx-home .collection-arrow { color:var(--accent); font-size:18px; text-decoration:none; }
+#wangmmx-home .home-gallery { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:22px; }
+#wangmmx-home .gallery-card { margin:0; min-width:0; }
+#wangmmx-home .gallery-image-link { display:block; }
+#wangmmx-home .gallery-card img { display:block; width:100%; height:auto; aspect-ratio:4/3; object-fit:cover; border:1px solid var(--line); }
+#wangmmx-home .gallery-placeholder { aspect-ratio:4/3; display:flex; flex-direction:column; gap:15px; align-items:center; justify-content:center; border:1px dashed var(--line); background:var(--soft); color:var(--muted); font-size:10px; }
+#wangmmx-home .gallery-placeholder-icon { font-size:24px; line-height:1; color:var(--accent); font-weight:normal; }
+#wangmmx-home .gallery-card h3 { font-size:14px; font-weight:500; margin:16px 0 7px; }
+#wangmmx-home .gallery-card figcaption p { font-size:11px; line-height:1.8; color:var(--muted); margin:0; }
+#wangmmx-home .home-promotions { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:22px; }
+#wangmmx-home .promotion-card { display:flex; align-items:center; justify-content:space-between; gap:20px; padding:24px; border:1px solid var(--line); min-width:0; }
+#wangmmx-home .promotion-info { min-width:0; }
+#wangmmx-home .promotion-type { font-size:9px; letter-spacing:1.2px; color:var(--accent); }
+#wangmmx-home .promotion-card h3 { font-size:17px; font-weight:500; margin:12px 0 10px; }
+#wangmmx-home .promotion-card p { margin:0; font-size:11px; line-height:1.9; color:var(--muted); }
+#wangmmx-home .promotion-card a,
+#wangmmx-home .promotion-status { display:inline-block; margin-top:16px; font-size:10px; color:var(--accent); }
+#wangmmx-home .promotion-qr { width:112px; height:112px; object-fit:contain; background:white; padding:5px; flex-shrink:0; }
+#wangmmx-home .promotion-qr-placeholder { width:104px; aspect-ratio:1; flex-shrink:0; padding:12px; display:grid; place-items:center; border:1px dashed var(--line); background:var(--soft); }
+#wangmmx-home .promotion-qr-placeholder span { font-size:10px; line-height:1.8; text-align:center; color:var(--muted); }
+#wangmmx-home .collection-empty { color:var(--muted); padding:20px 0; font-size:12px; }
+@media(max-width:650px) {
+  #wangmmx-home .home-collection { padding:28px 0; }
+  #wangmmx-home .collection-heading h2 { font-size:19px; }
+  #wangmmx-home .home-article-row { grid-template-columns:minmax(0,1fr) 20px; gap:8px; }
+  #wangmmx-home .home-article-row time { grid-column:1/-1; padding:0; }
+  #wangmmx-home .home-article-row h3 { font-size:15px; }
+  #wangmmx-home .home-gallery { grid-template-columns:repeat(2,minmax(0,1fr)); gap:20px 14px; }
+  #wangmmx-home .home-promotions { grid-template-columns:1fr; gap:16px; }
+  #wangmmx-home .promotion-card { padding:18px; }
+  #wangmmx-home .promotion-qr-placeholder { width:88px; }
+}
+
+
+/* In-page gallery viewer; the top layer keeps the background non-interactive. */
+html.gallery-modal-open { overflow:hidden; scrollbar-gutter:stable; }
+#wangmmx-home .gallery-lightbox {
+  width:min(1120px,calc(100vw - 40px)); max-width:none; max-height:calc(100dvh - 40px);
+  margin:auto; padding:18px; overflow:auto; border:1px solid var(--line); border-radius:8px;
+  background:var(--bg); color:var(--fg); box-shadow:0 20px 80px #00000040;
+}
+#wangmmx-home .gallery-lightbox::backdrop { background:#000000b8; }
+#wangmmx-home .gallery-dialog-header { display:flex; justify-content:space-between; align-items:center; gap:18px; margin-bottom:14px; }
+#wangmmx-home .gallery-dialog-header h2 { font-size:17px; line-height:1.6; font-weight:500; margin:0; }
+#wangmmx-home .gallery-counter { display:block; margin-top:4px; font-size:10px; color:var(--muted); }
+#wangmmx-home .gallery-lightbox button {
+  display:grid; place-items:center; width:38px; height:38px; flex-shrink:0; padding:0;
+  border:1px solid var(--line); border-radius:4px; background:var(--bg); color:var(--fg); font-size:22px;
+}
+#wangmmx-home .gallery-lightbox button:hover { background:var(--soft); }
+#wangmmx-home .gallery-lightbox button:focus-visible { outline:2px solid var(--accent); outline-offset:3px; }
+#wangmmx-home .gallery-lightbox button:disabled { opacity:.35; }
+#wangmmx-home .gallery-viewer { display:grid; grid-template-columns:38px minmax(0,1fr) 38px; gap:14px; align-items:center; }
+#wangmmx-home .gallery-large-image { display:block; width:100%; height:auto; max-height:66dvh; object-fit:contain; }
+#wangmmx-home .gallery-caption { font-size:11px; line-height:1.8; color:var(--muted); margin:14px 52px 0; }
+@media(max-width:650px) {
+  #wangmmx-home .gallery-lightbox { width:calc(100vw - 20px); max-height:calc(100dvh - 20px); padding:12px; }
+  #wangmmx-home .gallery-dialog-header h2 { font-size:15px; }
+  #wangmmx-home .gallery-viewer { grid-template-columns:30px minmax(0,1fr) 30px; gap:6px; }
+  #wangmmx-home .gallery-lightbox button { width:30px; height:36px; font-size:20px; }
+  #wangmmx-home .gallery-large-image { height:auto; max-height:58dvh; }
+  #wangmmx-home .gallery-caption { margin:12px 36px 0; font-size:10px; }
+}
+
+
+/* Document navigation, separate from the six physical shops in the town. */
+#wangmmx-home .documents-menu { position:relative; }
+#wangmmx-home .documents-menu > summary {
+  display:flex; gap:6px; align-items:center; list-style:none; padding:7px 10px;
+  border-radius:5px; color:var(--muted); font-size:11px; line-height:1.6;
+}
+#wangmmx-home .documents-menu > summary::-webkit-details-marker { display:none; }
+#wangmmx-home .documents-menu > summary span { font-size:11px; }
+#wangmmx-home .documents-menu[open] > summary,
+#wangmmx-home .documents-menu > summary:hover { color:var(--fg); background:var(--soft); }
+#wangmmx-home .documents-menu > summary:focus-visible { outline:2px solid var(--accent); outline-offset:3px; }
+#wangmmx-home .documents-subnav {
+  position:absolute; top:calc(100% + 8px); left:0; z-index:10000; min-width:144px;
+  display:flex; flex-direction:column; gap:2px; padding:6px;
+  border:1px solid var(--line); border-radius:6px; background:var(--bg); box-shadow:0 8px 24px #00000012;
+}
+#wangmmx-home .documents-subnav a { display:block; padding:8px 10px; font-size:11px; color:var(--muted); text-decoration:none; white-space:nowrap; border-radius:3px; }
+#wangmmx-home .documents-subnav a:hover { background:var(--soft); color:var(--fg); }
+#wangmmx-home .documents-subnav a:first-child { border-bottom:1px solid var(--line); border-radius:0; padding-bottom:10px; margin-bottom:2px; }
+@media(max-width:650px) { #wangmmx-home .documents-menu > summary { padding:5px 8px; font-size:10px; } }
+
+
+/* Keep the walking hint directly below the visible map, centered on the town. */
+#wangmmx-home .neighborhood-viewport { aspect-ratio:1000 / 590; }
+#wangmmx-home .neighborhood-controls { display:grid; grid-template-columns:1fr auto; align-items:center; gap:12px; margin-top:6px; }
+#wangmmx-home .map-instructions { margin:0; text-align:center; line-height:1.8; }
+#wangmmx-home .walk-buttons { justify-self:end; }
+#wangmmx-home .article-collection-title { min-width:0; flex:1; }
+#wangmmx-home .collection-title-line { display:flex; align-items:baseline; gap:18px; min-width:0; margin-top:9px; }
+#wangmmx-home .collection-title-line h2 { margin:0; flex-shrink:0; }
+#wangmmx-home .collection-title-line .collection-summary { margin:0; min-width:0; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+#wangmmx-home #article-collections .collection-heading { margin-bottom:25px; }
+@media(max-width:650px) {
+  #wangmmx-home .neighborhood-controls { grid-template-columns:1fr; gap:6px; }
+  #wangmmx-home .walk-buttons { justify-self:center; }
+  #wangmmx-home .collection-title-line { gap:10px; }
+  #wangmmx-home .collection-title-line .collection-summary { font-size:10px; }
+  #wangmmx-home #article-collections .collection-heading { gap:10px; }
+}
