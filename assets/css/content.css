@@ -1,0 +1,85 @@
+/* Reading pages share the homepage's theme variables, type and pixel accents. */
+#wangmmx-home.content-shell { max-width:1000px; }
+#wangmmx-home.content-shell .site-header { min-height:73px; height:auto; gap:20px; padding:12px 0; }
+#wangmmx-home.content-shell .content-nav { display:flex; gap:18px; align-items:center; font-size:11px; }
+#wangmmx-home.content-shell .content-nav a { text-decoration:none; color:var(--muted); padding:8px 0; }
+#wangmmx-home.content-shell .content-nav a:hover,
+#wangmmx-home.content-shell .content-nav [aria-current="page"] { color:var(--accent); }
+#wangmmx-home.content-shell .theme-picker { position:static; inset:auto; transform:none; margin-left:auto; }
+#wangmmx-home.content-shell main.reading-main { display:block; max-width:760px; margin:0 auto; padding:44px 0 64px; min-height:60vh; }
+#wangmmx-home.content-shell .back-link { display:inline-block; color:var(--muted); font-size:11px; text-decoration:none; margin-bottom:38px; }
+#wangmmx-home.content-shell .back-link:hover { color:var(--accent); }
+#wangmmx-home.content-shell .eyebrow { font-size:10px; color:var(--accent); letter-spacing:2px; margin:0 0 14px; }
+#wangmmx-home.content-shell .eyebrow::before { content:""; display:inline-block; width:6px; height:6px; background:var(--accent); margin-right:10px; box-shadow:3px 3px 0 var(--soft); }
+#wangmmx-home.content-shell h1 { font-size:clamp(25px,4vw,38px); line-height:1.5; letter-spacing:-.5px; overflow-wrap:anywhere; margin:0; font-weight:600; }
+#wangmmx-home.content-shell .reading-description { max-width:650px; font-size:13px; line-height:2; color:var(--muted); margin:16px 0 0; }
+#wangmmx-home.content-shell .reading-heading { padding-bottom:32px; }
+#wangmmx-home.content-shell .post-meta { display:flex; flex-wrap:wrap; gap:8px 16px; margin-top:16px; font-size:11px; line-height:1.8; color:var(--muted); }
+#wangmmx-home.content-shell .post-meta a { color:var(--accent); text-decoration:none; }
+#wangmmx-home.content-shell .journal-categories { display:flex; flex-wrap:wrap; gap:8px 18px; padding:16px 0; border-block:1px solid var(--line); }
+#wangmmx-home.content-shell .journal-categories a { padding:4px 0; font-size:11px; line-height:1.5; color:var(--muted); text-decoration:none; }
+#wangmmx-home.content-shell .journal-categories a:hover,
+#wangmmx-home.content-shell .journal-categories [aria-current="page"] { color:var(--accent); text-decoration:underline; text-underline-offset:6px; }
+#wangmmx-home.content-shell .entry-row { display:grid; grid-template-columns:100px minmax(0,1fr); gap:24px; padding:28px 0; border-bottom:1px solid var(--line); }
+#wangmmx-home.content-shell .entry-row time { color:var(--muted); font-size:11px; padding-top:7px; }
+#wangmmx-home.content-shell .entry-row h2 { font-size:19px; line-height:1.6; font-weight:500; margin:0; overflow-wrap:anywhere; }
+#wangmmx-home.content-shell .entry-row h2 a { text-decoration:none; color:var(--fg); }
+#wangmmx-home.content-shell .entry-row h2 a:hover { color:var(--accent); }
+#wangmmx-home.content-shell .entry-row h2 span { font-size:13px; color:var(--accent); }
+#wangmmx-home.content-shell .entry-row p { margin:9px 0 0; color:var(--muted); font-size:12px; line-height:1.9; overflow-wrap:anywhere; }
+#wangmmx-home.content-shell .entry-tags { display:flex; flex-wrap:wrap; gap:12px; font-size:10px; color:var(--accent); margin-top:12px; }
+#wangmmx-home.content-shell .empty-state { padding:60px 0; text-align:center; }
+#wangmmx-home.content-shell .empty-pixel { display:block; width:14px; height:14px; border:2px solid var(--accent); box-shadow:4px 4px 0 var(--soft); margin:0 auto 24px; }
+#wangmmx-home.content-shell .empty-state h2 { font-size:17px; line-height:1.7; font-weight:500; margin:0; }
+#wangmmx-home.content-shell .empty-state p { color:var(--muted); font-size:12px; line-height:1.9; margin:12px 0 20px; }
+#wangmmx-home.content-shell .empty-state a { font-size:11px; color:var(--accent); text-underline-offset:4px; }
+#wangmmx-home.content-shell .prose { font-size:14px; line-height:2; overflow-wrap:anywhere; }
+#wangmmx-home.content-shell .prose > :first-child { margin-top:0; }
+#wangmmx-home.content-shell .prose h2 { font-size:23px; line-height:1.6; margin:42px 0 18px; font-weight:500; }
+#wangmmx-home.content-shell .prose h3 { font-size:18px; line-height:1.7; margin:30px 0 14px; }
+#wangmmx-home.content-shell .prose p,
+#wangmmx-home.content-shell .prose ul,
+#wangmmx-home.content-shell .prose ol { margin:18px 0; }
+#wangmmx-home.content-shell .prose li + li { margin-top:6px; }
+#wangmmx-home.content-shell .prose a { color:var(--accent); text-underline-offset:4px; }
+#wangmmx-home.content-shell .prose a:hover { text-decoration-thickness:2px; }
+#wangmmx-home.content-shell .prose img { display:block; max-width:100%; height:auto; margin:24px auto; }
+#wangmmx-home.content-shell .prose blockquote { margin:24px 0; padding:10px 20px; border-left:3px solid var(--accent); background:var(--soft); color:var(--fg); }
+#wangmmx-home.content-shell .prose blockquote p { margin:6px 0; }
+#wangmmx-home.content-shell .prose pre { overflow-x:auto; padding:20px; line-height:1.75; border:1px solid var(--line); background:var(--soft); tab-size:2; }
+#wangmmx-home.content-shell .prose code { font-family:'JetBrains Mono','Courier New',monospace; font-size:.88em; background:var(--soft); padding:2px 5px; }
+#wangmmx-home.content-shell .prose pre code { background:none; padding:0; }
+#wangmmx-home.content-shell .prose .highlight { margin:24px 0; }
+#wangmmx-home.content-shell .prose .highlight pre { margin:0; }
+#wangmmx-home.content-shell .prose .highlight .c,
+#wangmmx-home.content-shell .prose .highlight .c1 { color:var(--muted); }
+#wangmmx-home.content-shell .prose .highlight .k,
+#wangmmx-home.content-shell .prose .highlight .kd,
+#wangmmx-home.content-shell .prose .highlight .s,
+#wangmmx-home.content-shell .prose .highlight .s1,
+#wangmmx-home.content-shell .prose .highlight .s2 { color:var(--accent); }
+#wangmmx-home.content-shell .prose table { display:block; max-width:100%; overflow-x:auto; border-collapse:collapse; margin:24px 0; font-size:12px; }
+#wangmmx-home.content-shell .prose th,
+#wangmmx-home.content-shell .prose td { padding:10px 16px; border:1px solid var(--line); text-align:left; white-space:normal; min-width:100px; }
+#wangmmx-home.content-shell .prose th { background:var(--soft); font-weight:600; }
+#wangmmx-home.content-shell .prose hr { border:0; border-top:1px solid var(--line); margin:36px 0; }
+#wangmmx-home.content-shell .post .prose { border-top:1px solid var(--line); padding-top:30px; }
+#wangmmx-home.content-shell .post-tags { list-style:none; padding:0; margin:32px 0; display:flex; flex-wrap:wrap; gap:12px; font-size:11px; color:var(--muted); }
+#wangmmx-home.content-shell .post-pagination { display:flex; gap:24px; border-top:1px solid var(--line); padding-top:24px; margin-top:36px; }
+#wangmmx-home.content-shell .post-pagination a { flex:1; color:var(--fg); font-size:13px; text-decoration:none; overflow-wrap:anywhere; }
+#wangmmx-home.content-shell .post-pagination a:last-child { text-align:right; }
+#wangmmx-home.content-shell .post-pagination small { display:block; color:var(--muted); font-size:10px; margin-bottom:9px; }
+#wangmmx-home.content-shell footer.content-footer { display:flex; flex-wrap:wrap; gap:12px; align-items:center; justify-content:space-between; padding:24px 0; border-top:1px solid var(--line); color:var(--muted); font-size:10px; }
+#wangmmx-home.content-shell .content-footer a { color:var(--muted); text-decoration:none; }
+#wangmmx-home.content-shell a:focus-visible { outline:2px dashed var(--accent); outline-offset:4px; }
+@media(max-width:560px) {
+  #wangmmx-home.content-shell .site-header { gap:14px; flex-wrap:wrap; }
+  #wangmmx-home.content-shell .site-header .logo { font-size:23px; }
+  #wangmmx-home.content-shell .content-nav { gap:12px; font-size:10px; }
+  #wangmmx-home.content-shell main.reading-main { padding:28px 0 44px; }
+  #wangmmx-home.content-shell .back-link { margin-bottom:28px; }
+  #wangmmx-home.content-shell .entry-row { grid-template-columns:1fr; gap:6px; padding:22px 0; }
+  #wangmmx-home.content-shell .prose { font-size:13px; }
+  #wangmmx-home.content-shell .prose pre { padding:14px; }
+  #wangmmx-home.content-shell .reading-description { font-size:12px; }
+}

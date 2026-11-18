@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="zh-CN" data-theme="cream">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <title>关于我</title>
+  <meta name="description" content="写代码、探索 Web3，也喜欢亲手造些小世界。">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="关于我">
+  <meta property="og:description" content="写代码、探索 Web3，也喜欢亲手造些小世界。">
+  <link rel="icon" type="image/png" href="/icon.png">
+  <script>
+    // Restore the saved theme before paint, including when storage is restricted.
+    try {
+      var savedTheme = localStorage.getItem('wangmmx-home-theme');
+      if (['cream', 'midnight', 'white', 'black'].indexOf(savedTheme) !== -1) {
+        document.documentElement.dataset.theme = savedTheme;
+      }
+    } catch (_) {}
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/home.css?v=20261118-new-journal">
+  <script src="/assets/js/home.js?v=20261118-new-journal" defer></script>
+  
+  <link rel="stylesheet" href="/assets/css/content.css?v=20261118-new-journal">
+  
+  <link rel="alternate" type="application/atom+xml" title="Wangmmx 的记录" href="/feed.xml">
+  <link rel="canonical" href="https://wangmmx.github.io/about/">
+</head>
+
+<body>
+  <a class="skip-link" href="#main-content">跳到主要内容</a>
+  <div id="wangmmx-home" class="content-shell">
+    <header class="site-header">
+  <a class="logo" href="/" aria-label="Wangmmx 首页">Wangmmx</a>
+  <nav class="content-nav" aria-label="网站导航">
+    <a href="/">街区</a>
+    <a href="/journal/">记录</a>
+    <a href="/about/" aria-current="page">关于</a>
+  </nav>
+  <label class="theme-picker" for="theme-picker">
+    <span class="sr-label">切换配色</span>
+    <select id="theme-picker" aria-label="切换网站配色">
+      <option value="cream">奶油绿</option><option value="midnight">午夜蓝</option>
+      <option value="white">纯白</option><option value="black">纯黑</option>
+    </select>
+  </label>
+</header>
+
+    <main id="main-content" class="reading-main"><div class="reading-heading">
+  <a class="back-link" href="/">← 回到街区</a>
+  <p class="eyebrow">ABOUT WANGMMX</p>
+  <h1>关于我</h1>
+  <p class="reading-description">写代码、探索 Web3，也喜欢亲手造些小世界。</p>
+</div>
+<div class="prose"><p>我是 Wangmmx，一名女程序员。</p>
+
+<p>这里是我的个人小空间，放代码和研究，也放微缩模型、游戏和生活里有意思的事。不限定主题，慢慢补充。</p>
+
+<h2 id="在其他地方找到我">在其他地方找到我</h2>
+
+<ul>
+  <li><a href="https://github.com/Wangmmx">GitHub</a></li>
+  <li><a href="https://blog.csdn.net/wangmmx725">CSDN</a></li>
+</ul>
+</div>
+</main>
+    <footer class="content-footer">
+  <span>© Wangmmx · 自己的一小块互联网 <span class="pixel-heart" aria-hidden="true">♥</span></span>
+  <a href="/">回到街区 ↗</a>
+</footer>
+
+  </div>
+</body>
+</html>

@@ -1,0 +1,725 @@
+#wangmmx-home {
+  --bg:#f2f7f7;
+  --fg:#253747;
+  --muted:#808477;
+  --line:#dcded1;
+  --accent:#278b9e;
+  --soft:#e0eff0;
+  background:var(--bg);
+  color:var(--fg);
+  font-family:'Courier New','PingFang SC',monospace;
+  padding:0 38px;
+  position:relative}
+#wangmmx-home * {
+  box-sizing:border-box}
+#wangmmx-home button,#wangmmx-home a {
+  color:inherit;
+  font:inherit}
+#wangmmx-home button {
+  cursor:pointer}
+#wangmmx-home header {
+  display:flex;
+  align-items:center;
+  height:73px;
+  gap:20px;
+  border-bottom:1px solid var(--line);
+  padding-right:65px}
+#wangmmx-home .logo {
+  font-size:27px;
+  font-weight:bold;
+  letter-spacing:-2px;
+  text-decoration:none}
+#wangmmx-home .logo span {
+  color:var(--accent)}
+#wangmmx-home header>span {
+  font-size:9px;
+  letter-spacing:2px;
+  color:var(--muted)}
+#wangmmx-home main {
+  display:grid;
+  grid-template-columns:1.12fr 1fr;
+  gap:18px;
+  align-items:center;
+  padding:43px 0 37px}
+#wangmmx-home .status {
+  font-size:10px;
+  letter-spacing:1px;
+  display:flex;
+  align-items:center;
+  gap:8px;
+  color:var(--accent)}
+#wangmmx-home .status i {
+  display:block;
+  width:6px;
+  height:6px;
+  background:var(--accent);
+  box-shadow:3px 0 var(--soft)}
+#wangmmx-home .intro p {
+  font-size:12px;
+  line-height:1.95;
+  margin:0;
+  color:var(--muted)}
+#wangmmx-home .signature {
+  font-size:9px;
+  letter-spacing:.5px;
+  margin-top:23px;
+  color:var(--muted)}
+#wangmmx-home .signature span {
+  margin:0 7px;
+  color:var(--accent)}
+
+
+
+#wangmmx-home .links {
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  border-top:2px solid var(--fg);
+  border-bottom:1px solid var(--line);
+  gap:20px}
+#wangmmx-home .links button {
+  display:flex;
+  align-items:center;
+  text-align:left;
+  padding:23px 0 25px;
+  gap:12px;
+  border:0;
+  background:transparent;
+  min-width:0}
+#wangmmx-home .number {
+  font-size:9px;
+  color:var(--accent);
+  align-self:flex-start;
+  margin-top:3px}
+#wangmmx-home .link-title {
+  font-size:13px;
+  white-space:nowrap}
+#wangmmx-home small {
+  display:block;
+  font-size:9px;
+  color:var(--muted);
+  margin-top:8px;
+  letter-spacing:0}
+#wangmmx-home .arrow {
+  margin-left:auto;
+  color:var(--accent);
+  transition:transform .15s}
+#wangmmx-home .links button:hover .arrow {
+  transform:translate(3px,-3px)}
+#wangmmx-home .links button:hover .link-title {
+  color:var(--accent)}
+#wangmmx-home button:focus-visible,#wangmmx-home a:focus-visible {
+  outline:2px dashed var(--accent);
+  outline-offset:4px}
+#wangmmx-home .now {
+  display:flex;
+  align-items:center;
+  gap:17px;
+  padding:24px 0;
+  color:var(--muted)}
+#wangmmx-home .now>span:first-child {
+  font-size:9px;
+  color:var(--accent);
+  letter-spacing:1px}
+#wangmmx-home .now p {
+  font-size:11px;
+  line-height:1.8;
+  margin:0}
+#wangmmx-home .flower {
+  margin-left:auto;
+  color:var(--accent);
+  font-size:24px}
+#wangmmx-home footer {
+  display:flex;
+  justify-content:space-between;
+  gap:12px;
+  padding:18px 0 22px;
+  border-top:1px solid var(--line);
+  font-size:9px;
+  color:var(--muted)}
+#wangmmx-home .pixel-heart {
+  color:var(--accent);
+  margin-left:6px}
+#wangmmx-home .expanded {
+  display:flex;
+  gap:18px;
+  justify-content:space-between;
+  padding:23px 0 25px;
+  border-bottom:1px solid var(--line)}
+#wangmmx-home .expanded[hidden] {
+  display:none}
+#wangmmx-home .detail-tag {
+  font-size:9px;
+  color:var(--accent);
+  letter-spacing:2px}
+#wangmmx-home h2 {
+  font-size:19px;
+  font-weight:500;
+  margin:10px 0}
+#wangmmx-home .expanded p {
+  font-size:12px;
+  color:var(--muted);
+  line-height:1.9;
+  max-width:490px;
+  margin:0}
+#wangmmx-home .external {
+  display:flex;
+  gap:20px;
+  flex-wrap:wrap;
+  margin-top:15px;
+  font-size:11px}
+#wangmmx-home .external:empty {
+  display:none}
+#wangmmx-home .external a {
+  color:var(--accent);
+  text-underline-offset:5px}
+#wangmmx-home .close {
+  border:0;
+  background:transparent;
+  align-self:flex-start;
+  font-size:23px;
+  padding:0 5px}
+@media(max-width:560px) {
+  #wangmmx-home {
+  padding:0 23px}
+#wangmmx-home header {
+  padding-right:0;
+  gap:13px}
+#wangmmx-home header>span {
+  font-size:8px;
+  letter-spacing:1px}
+#wangmmx-home main {
+  grid-template-columns:1fr;
+  gap:15px;
+  padding:32px 0 25px}
+
+#wangmmx-home .links {
+  grid-template-columns:1fr;
+  gap:0}
+#wangmmx-home .links button {
+  padding:19px 0;
+  border-bottom:1px solid var(--line)}
+#wangmmx-home .links button:last-child {
+  border-bottom:0}
+#wangmmx-home .link-title {
+  display:flex;
+  align-items:center;
+  gap:16px}
+#wangmmx-home small {
+  margin-top:0;
+  font-size:10px}
+#wangmmx-home .now {
+  gap:12px}
+#wangmmx-home .now p {
+  font-size:10px}
+#wangmmx-home footer {
+  font-size:8px}
+}
+@media(prefers-reduced-motion:reduce) {
+  #wangmmx-home .arrow {
+  transition:none}
+}
+
+
+#wangmmx-home {
+  font-family:'JetBrains Mono','SFMono-Regular','Cascadia Code','Noto Sans Mono CJK SC','Sarasa Mono SC',Menlo,Consolas,monospace}
+
+#wangmmx-home .logo {
+  font-size:21px;
+  font-weight:500;
+  letter-spacing:-1px}
+
+#wangmmx-home header {
+  gap:17px;
+  padding-right:65px}
+
+#wangmmx-home header>span {
+  font-size:8px;
+  letter-spacing:1px}
+
+#wangmmx-home .theme-picker {
+  margin-left:auto;
+  display:flex;
+  align-items:center}
+
+#wangmmx-home .theme-picker select {
+  color:var(--fg);
+  background:var(--bg);
+  border:1px solid var(--line);
+  font:inherit;
+  font-size:10px;
+  padding:7px 8px;
+  border-radius:0;
+  max-width:110px;
+  cursor:pointer;
+  color-scheme:light}
+
+#wangmmx-home[data-theme=midnight] .theme-picker select,#wangmmx-home[data-theme=black] .theme-picker select {
+  color-scheme:dark}
+
+#wangmmx-home .sr-label {
+  position:absolute;
+  width:1px;
+  height:1px;
+  padding:0;
+  margin:-1px;
+  overflow:hidden;
+  clip:rect(0,0,0,0);
+  white-space:nowrap;
+  border:0}
+
+#wangmmx-home .intro-copy {
+  font-size:19px;
+  color:var(--fg);
+  line-height:1.95;
+  letter-spacing:1px;
+  margin-top:25px}
+
+#wangmmx-home .intro-copy br:last-of-type {
+  display:block}
+
+#wangmmx-home main {
+  padding-top:40px;
+  padding-bottom:37px;
+  min-height:310px}
+
+@media(max-width:560px) {
+  #wangmmx-home header {
+  padding-right:0;
+  flex-wrap:wrap;
+  gap:12px}
+#wangmmx-home header>span {
+  display:none}
+#wangmmx-home .logo {
+  font-size:20px}
+#wangmmx-home main {
+  min-height:0}
+
+#wangmmx-home .intro-copy {
+  font-size:18px}
+}
+
+
+:root  {
+  
+  --bg: #f2f7f7;
+  
+  --fg: #253747;
+  
+  --muted: #718391;
+  
+  --line: #d5e2e6;
+  
+  --accent: #278b9e;
+  
+  --soft: #e0eff0;
+  
+  color-scheme: light;
+  
+}
+
+:root[data-theme="midnight"]  {
+  
+  --bg: #222c3c;
+   --fg: #e7e9e4;
+   --muted: #a5b3c1;
+  
+  --line: #43546a;
+   --accent: #7acbdc;
+   --soft: #344657;
+  
+  color-scheme: dark;
+  
+}
+
+:root[data-theme="white"]  {
+  
+  --bg: #ffffff;
+   --fg: #282d30;
+   --muted: #69747a;
+  
+  --line: #e1e5e7;
+   --accent: #547c76;
+   --soft: #eef3f1;
+  
+}
+
+:root[data-theme="black"]  {
+  
+  --bg: #111111;
+   --fg: #ededeb;
+   --muted: #a2a7a4;
+  
+  --line: #343735;
+   --accent: #b7c7ac;
+   --soft: #242b23;
+  
+  color-scheme: dark;
+  
+}
+
+*  {
+   box-sizing: border-box;
+   }
+
+body  {
+   margin: 0;
+   background: var(--bg);
+   color: var(--fg);
+   }
+
+#wangmmx-home  {
+  
+  --bg: inherit;
+   --fg: inherit;
+   --muted: inherit;
+  
+  --line: inherit;
+   --accent: inherit;
+   --soft: inherit;
+  
+  max-width: 880px;
+  
+  margin: 32px auto 0;
+  
+  padding: 0 42px;
+  
+}
+
+#wangmmx-home header  {
+   padding-right: 0;
+   }
+
+#wangmmx-home .intro-copy  {
+   margin: 24px 0 0;
+   }
+
+#wangmmx-home .intro-summary  {
+  
+  margin-top: 14px;
+  
+  font-size: 12px;
+  
+  line-height: 1.9;
+  
+  color: var(--muted);
+  
+}
+
+#wangmmx-home .theme-picker select  {
+   color-scheme: inherit;
+   min-height: 36px;
+   }
+
+#wangmmx-home footer a  {
+   color: var(--muted);
+   text-underline-offset: 4px;
+   }
+
+.skip-link  {
+  
+  position: absolute;
+   left: 16px;
+   top: -80px;
+  
+  background: var(--bg);
+   color: var(--fg);
+   padding: 12px;
+   z-index: 10;
+  
+}
+
+.skip-link:focus  {
+   top: 12px;
+   }
+
+@media (min-width: 1100px)  {
+  
+  #wangmmx-home  {
+   margin-top: 48px;
+   }
+
+  #wangmmx-home main  {
+   padding-top: 48px;
+   padding-bottom: 44px;
+   }
+
+}
+
+@media (max-width: 560px)  {
+  
+  #wangmmx-home  {
+   margin-top: 0;
+   padding: 0 23px;
+   }
+
+  #wangmmx-home .links button  {
+   min-height: 64px;
+   }
+
+  #wangmmx-home .close  {
+   min-width: 44px;
+   min-height: 44px;
+   }
+
+
+}
+
+/* Personal links and quiet placeholders use the current theme's colors. */
+#wangmmx-home .platform-links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px 18px;
+  margin-top: 18px;
+  font-size: 11px;
+}
+#wangmmx-home .platform-links a,
+#wangmmx-home .project-item a {
+  color: var(--accent);
+  text-decoration: none;
+}
+#wangmmx-home .platform-links a:hover,
+#wangmmx-home .project-item a:hover {
+  text-decoration: underline;
+  text-underline-offset: 5px;
+}
+#wangmmx-home .platform-links a > span { font-size: 10px; }
+#wangmmx-home .pending-platform { color: var(--muted); }
+#wangmmx-home .pending-platform small { font-size: 9px; }
+#wangmmx-home .projects { padding: 26px 0; border-bottom: 1px solid var(--line); }
+#wangmmx-home .projects-heading { display: flex; align-items: center; gap: 16px; margin-bottom: 23px; }
+#wangmmx-home .projects-heading h2 { font-size: 14px; margin: 0; font-weight: 500; }
+#wangmmx-home .projects-heading > span { font-size: 9px; letter-spacing: 1px; color: var(--muted); }
+#wangmmx-home .project-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; }
+#wangmmx-home .project-category { font-size: 9px; letter-spacing: 1px; color: var(--accent); }
+#wangmmx-home .project-item { min-width: 0; }
+#wangmmx-home .project-item h3 { font-size: 13px; font-weight: 500; margin: 12px 0 9px; overflow-wrap: anywhere; }
+#wangmmx-home .project-item p { color: var(--muted); font-size: 11px; line-height: 1.8; margin: 0; }
+#wangmmx-home .project-pending { display: inline-block; color: var(--muted); font-size: 9px; margin-top: 15px; }
+@media (max-width: 560px) {
+  #wangmmx-home .platform-links a { padding: 10px 0; }
+  #wangmmx-home .platform-links { gap: 0 18px; margin-top: 11px; }
+  #wangmmx-home .project-grid { grid-template-columns: 1fr; gap: 20px; }
+  #wangmmx-home .project-item + .project-item { padding-top: 20px; border-top: 1px dashed var(--line); }
+}
+
+/* The skyline sits behind the header and fades into each theme's page color. */
+body { position: relative; isolation: isolate; display: flow-root; }
+.home-backdrop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  pointer-events: none;
+  user-select: none;
+  overflow: hidden;
+  opacity: 0.28;
+  z-index: -1;
+  -webkit-mask-image: linear-gradient(to bottom, black 0%, black 55%, transparent 100%);
+  mask-image: linear-gradient(to bottom, black 0%, black 55%, transparent 100%);
+}
+.home-backdrop-crop {
+  width: max(100%, 900px);
+  max-width: 1800px;
+  aspect-ratio: 2172 / 596;
+  overflow: hidden;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.home-backdrop img {
+  display: block;
+  width: 100%;
+  height: auto;
+  image-rendering: pixelated;
+  filter: saturate(0.82);
+}
+#wangmmx-home { background: transparent; }
+:root[data-theme="midnight"] .home-backdrop,
+:root[data-theme="black"] .home-backdrop { opacity: 0.24; }
+@media (max-width: 560px) {
+  .home-backdrop { top: 0; opacity: 0.22; }
+  :root[data-theme="midnight"] .home-backdrop,
+  :root[data-theme="black"] .home-backdrop { opacity: 0.20; }
+}
+
+/* A text-first developer identity, with miniature scenes as a personal interest. */
+#wangmmx-home main {
+  grid-template-columns: minmax(0, 1fr) minmax(0, 0.95fr);
+  gap: 44px;
+  padding-top: 54px;
+  padding-bottom: 52px;
+}
+#wangmmx-home .intro-copy {
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 1.65;
+  letter-spacing: 1px;
+  margin-top: 19px;
+}
+#wangmmx-home .intro-summary { margin-top: 14px; line-height: 2; }
+#wangmmx-home .signature { font-size: 9px; letter-spacing: 1px; }
+#wangmmx-home .pending-platform small { display: inline; margin-left: 4px; }
+#wangmmx-home .project-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 26px 32px; }
+#wangmmx-home .project-item { padding-left: 14px; border-left: 1px solid var(--line); }
+@media (max-width: 650px) {
+  #wangmmx-home main { grid-template-columns: 1fr; gap: 34px; padding-top: 34px; padding-bottom: 34px; }
+  #wangmmx-home .intro-copy { font-size: 28px; }
+}
+@media (max-width: 560px) {
+  #wangmmx-home .project-grid { grid-template-columns: 1fr; }
+  #wangmmx-home .project-item + .project-item { border-top: 0; padding-top: 0; }
+}
+
+
+#wangmmx-home { max-width: 1040px; }
+#wangmmx-home main { display: block; padding-top: 34px; padding-bottom: 26px; min-height: 0; }
+#wangmmx-home .intro-copy { font-size: 29px; line-height: 1.6; margin: 14px 0 10px; }
+#wangmmx-home .signature { display: none; }
+#wangmmx-home .neighborhood { padding-bottom: 28px; }
+#wangmmx-home .neighborhood-heading { display: flex; justify-content: space-between; align-items: center; gap: 14px; margin-bottom: 14px; }
+#wangmmx-home .neighborhood-heading h2 { font-size: 12px; font-weight: 500; margin: 0; }
+#wangmmx-home .neighborhood-heading > span { color: var(--muted); font-size: 10px; }
+#wangmmx-home .neighborhood-stage { position: relative; width: 100%; aspect-ratio: 5 / 3; overflow: hidden; }
+#wangmmx-home #neighborhood-canvas { display: block; width: 100%; height: 100%; image-rendering: pixelated; }
+#wangmmx-home .place-sign { position: absolute; width: 24%; min-height: 30px; padding: 5px 3px; background: var(--bg); color: var(--fg); border: 1px solid var(--line); box-shadow: 2px 2px 0 var(--line); font-size: 11px; }
+#wangmmx-home .place-sign[aria-expanded="true"] { color: var(--accent); border-color: var(--accent); }
+#wangmmx-home .neighborhood-controls { display: flex; align-items: center; justify-content: space-between; gap: 10px; margin-top: 12px; color: var(--muted); font-size: 10px; }
+#wangmmx-home .walk-buttons { display: flex; gap: 6px; }
+#wangmmx-home .walk-buttons button { min-width: 32px; min-height: 32px; background: none; border: 1px solid var(--line); font-size: 14px; }
+#wangmmx-home .neighborhood-detail { display: flex; justify-content: space-between; gap: 16px; margin-top: 18px; padding: 20px 0 0; border-top: 1px solid var(--line); }
+#wangmmx-home .neighborhood-detail[hidden], #wangmmx-home .place-story[hidden] { display: none; }
+#wangmmx-home .place-story h3 { font-size: 17px; font-weight: 500; margin: 9px 0; }
+#wangmmx-home .place-story p { font-size: 12px; color: var(--muted); line-height: 1.9; margin: 0; }
+#wangmmx-home .place-pending { display: block; font-size: 10px; color: var(--muted); margin-top: 10px; }
+#wangmmx-home .close-place { border: 0; background: none; font-size: 22px; align-self: flex-start; min-width: 44px; min-height: 44px; }
+#wangmmx-home .neighborhood-stage:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
+@media (max-width: 560px) {
+  #wangmmx-home .intro-copy { font-size: 23px; }
+  #wangmmx-home .neighborhood-heading > span { font-size: 9px; }
+  #wangmmx-home .place-sign { font-size: 9px; min-height: 28px; }
+  #wangmmx-home .neighborhood-controls { flex-wrap: wrap; font-size: 9px; }
+  #wangmmx-home .walk-buttons button { min-width: 44px; min-height: 44px; }
+}
+@media (pointer: coarse) {
+  #wangmmx-home .place-sign::after { content: ""; position: absolute; inset: -8px 0; }
+}
+
+/* A compact town occupies one stable spot near the top of the homepage. */
+#wangmmx-home .home-top {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 500px);
+  align-items: center;
+  gap: 32px;
+  padding: 30px 0 32px;
+}
+#wangmmx-home .home-top main { padding: 0; }
+#wangmmx-home .home-top .intro-copy { font-size: 25px; }
+#wangmmx-home .home-top .intro-summary { max-width: 360px; }
+#wangmmx-home .neighborhood { width: 100%; max-width: 500px; justify-self: center; padding-bottom: 0; }
+#wangmmx-home .neighborhood-heading { margin-bottom: 10px; }
+#wangmmx-home .neighborhood-heading > span { font-size: 9px; }
+#wangmmx-home .place-sign { font-size: 9px; min-height: 23px; padding: 3px 2px; box-shadow: 1px 1px 0 var(--line); }
+#wangmmx-home .neighborhood-controls { flex-wrap: wrap; gap: 8px; font-size: 9px; margin-top: 8px; }
+#wangmmx-home .walk-buttons button { min-width: 27px; min-height: 27px; font-size: 12px; }
+#wangmmx-home .neighborhood-detail { padding-top: 14px; margin-top: 12px; }
+@media (max-width: 850px) {
+  #wangmmx-home .home-top { grid-template-columns: 1fr; gap: 24px; }
+  #wangmmx-home .home-top .intro-summary { max-width: none; }
+}
+@media (pointer: coarse) {
+  #wangmmx-home .walk-buttons button { min-width: 44px; min-height: 44px; }
+  #wangmmx-home .place-sign::after { inset: -11px 0; }
+}
+
+/* Small pitched-roof cottages, transparent map edges, no oversized shop plaques. */
+#wangmmx-home .neighborhood-stage { background: transparent; }
+#wangmmx-home .place-sign {
+  min-height: 20px; padding: 2px 0;
+  background: transparent; border: 0; box-shadow: none;
+  font-size: 9px; text-shadow: 0 1px 1px var(--bg);
+}
+#wangmmx-home .place-sign:hover { text-decoration: underline; text-underline-offset: 3px; }
+#wangmmx-home .place-sign[aria-expanded="true"] { color: var(--fg); text-decoration: underline; text-underline-offset: 3px; }
+
+/* The clickable sign is mounted on the facade, rather than above the house. */
+#wangmmx-home .place-sign {
+  min-height: 0; padding: 0; color: transparent; text-shadow: none;
+  background: transparent; border: 0; box-shadow: none;
+}
+#wangmmx-home .place-sign:hover,
+#wangmmx-home .place-sign[aria-expanded="true"] { color: transparent; text-decoration: none; }
+#wangmmx-home .place-sign::after { content: none; }
+#wangmmx-home .shop-name {
+  position: absolute; top: 50%; left: 18%;
+  padding: 1px 2px; white-space: nowrap;
+  font-size: 10px; font-weight: 500; line-height: 1.1; letter-spacing: 0;
+  color: #f1f2e8; background: transparent;
+  border-bottom: 0;
+  box-shadow: none;
+  text-shadow: -1px 0 #34454d, 1px 0 #34454d, 0 1px #34454d, 0 -1px #34454d;
+}
+#wangmmx-home .place-sign:hover .shop-name,
+#wangmmx-home .place-sign[aria-expanded="true"] .shop-name { background: transparent; color: #fff; }
+@media (max-width: 560px) {
+  #wangmmx-home .shop-name { font-size: 9px; padding: 1px 2px; left: 14%; }
+}
+
+/* Facade lettering is projected with the voxel buildings on the canvas. */
+#wangmmx-home .place-sign .shop-name { opacity: 0; }
+#wangmmx-home .place-sign:focus-visible { outline: 2px dashed var(--accent); outline-offset: 2px; }
+
+
+/* A quiet backdrop keeps the small architecture distinct from the header artwork. */
+#wangmmx-home .neighborhood-stage { background: radial-gradient(ellipse at center, var(--bg) 35%, transparent 78%); }
+
+#wangmmx-home #neighborhood-canvas { image-rendering: pixelated; }
+
+/* Expanded city: two road rings and room between the skyline and the storefronts. */
+#wangmmx-home .home-top { grid-template-columns:minmax(0,1fr) minmax(0,680px);gap:24px; }
+#wangmmx-home .neighborhood { max-width:680px; }
+#wangmmx-home .neighborhood-stage { aspect-ratio:25 / 16; }
+@media(max-width:1050px) { #wangmmx-home .home-top { grid-template-columns:1fr;gap:24px; } #wangmmx-home .home-top .intro-summary { max-width:600px; } }
+
+
+/* Pointer hit testing uses the painted shop silhouettes; keyboard buttons stay accessible. */
+#wangmmx-home, #wangmmx-home * { cursor:url('../images/home/cursor-arrow.svg?v=half') 1 1, default; }
+#wangmmx-home a, #wangmmx-home button, #wangmmx-home select,
+#wangmmx-home .neighborhood-stage.is-over-shop canvas { cursor:url('../images/home/cursor-halo.svg?v=half') 8 8, pointer; }
+#wangmmx-home .place-sign { pointer-events:none; }
+
+#wangmmx-home .neighborhood-heading > span { margin-left:auto; }
+
+
+/* Keep the introduction and complete town side by side at every viewport size. */
+#wangmmx-home { max-width:1180px; }
+#wangmmx-home .home-top {
+  display:grid;
+  grid-template-columns:minmax(0,27fr) minmax(0,73fr);
+  align-items:center;
+  gap:clamp(8px,2vw,24px);
+  padding:20px 0 24px;
+}
+#wangmmx-home .home-top main { min-width:0; }
+#wangmmx-home .home-top .intro-summary { max-width:340px; }
+#wangmmx-home .neighborhood { width:100%; max-width:760px; min-width:0; }
+#wangmmx-home .neighborhood-viewport { width:100%; max-width:100%; overflow:hidden; }
+#wangmmx-home .neighborhood-stage { width:100%; min-width:0; }
+#wangmmx-home .neighborhood-pan-hint { display:none; }
+@media(max-width:650px) {
+  #wangmmx-home .home-top { padding:16px 0 20px; }
+  #wangmmx-home .home-top .intro-summary { font-size:10px; line-height:1.8; }
+  #wangmmx-home .home-top .status { font-size:8px; letter-spacing:.3px; line-height:1.7; gap:4px; }
+  #wangmmx-home .home-top .platform-links { gap:3px 10px; font-size:9px; }
+  #wangmmx-home .home-top .platform-links a { padding:4px 0; }
+  #wangmmx-home .neighborhood-heading > span { font-size:8px; }
+  #wangmmx-home .neighborhood-controls { font-size:8px; }
+  #wangmmx-home .walk-buttons { gap:3px; }
+  #wangmmx-home .walk-buttons button { min-width:26px; min-height:30px; }
+}
+
+/* Topic doors continue into the matching reading pages. */
+#wangmmx-home .place-entry { display:inline-block; margin-top:14px; font-size:11px; color:var(--accent); text-underline-offset:4px; }
+
+#wangmmx-home .home-journal-link { font-size:11px; color:var(--muted); text-decoration:none; white-space:nowrap; }
+#wangmmx-home .home-journal-link:hover { color:var(--accent); }
