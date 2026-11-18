@@ -904,3 +904,12 @@ html.gallery-modal-open { overflow:hidden; scrollbar-gutter:stable; }
   #wangmmx-home .collection-title-line .collection-summary { font-size:10px; }
   #wangmmx-home #article-collections .collection-heading { gap:10px; }
 }
+
+
+/* Shared topic menus on the homepage and reading pages. */
+#wangmmx-home .documents-menu > summary { cursor:pointer; }
+#wangmmx-home .topic-subnav a:first-child { border-bottom:0; border-radius:3px; padding:8px 10px; margin:0; }
+#wangmmx-home .pending-contact { display:flex; align-items:center; gap:12px; padding:8px 10px; color:var(--muted); font-size:11px; white-space:nowrap; }
+#wangmmx-home .pending-contact small { font-size:9px; opacity:.7; }
+#wangmmx-home .contact-menu .documents-subnav { left:auto; right:0; }
+#wangmmx-home .documents-subnav [aria-current="page"] { color:var(--fg); background:var(--soft); }

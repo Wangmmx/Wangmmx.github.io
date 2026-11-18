@@ -17,18 +17,21 @@
   }));
   window.addEventListener("storage", event => { if (event.key === storageKey) applyTheme(event.newValue); });
 
-  const documentsMenu = root.querySelector(".documents-menu");
-  if (documentsMenu) {
-    document.addEventListener("click", event => {
-      if (!documentsMenu.contains(event.target)) documentsMenu.open = false;
+  const navigationMenus = Array.from(root.querySelectorAll(".documents-menu"));
+  navigationMenus.forEach(menu => {
+    menu.addEventListener("toggle", () => {
+      if (menu.open) navigationMenus.forEach(other => { if (other !== menu) other.open = false; });
     });
-    documentsMenu.addEventListener("keydown", event => {
-      if (event.key === "Escape" && documentsMenu.open) {
-        event.preventDefault();event.stopPropagation();documentsMenu.open = false;
-        documentsMenu.querySelector("summary").focus();
+    menu.addEventListener("keydown", event => {
+      if (event.key === "Escape" && menu.open) {
+        event.preventDefault();event.stopPropagation();menu.open = false;
+        menu.querySelector("summary").focus();
       }
     });
-  }
+  });
+  document.addEventListener("click", event => {
+    navigationMenus.forEach(menu => { if (!menu.contains(event.target)) menu.open = false; });
+  });
 
   const intro = root.querySelector(".home-top main .intro");
   const detail = document.getElementById("neighborhood-detail");
